@@ -1,0 +1,40 @@
+import React, { Component } from "react";
+import "./App.css";
+import SearchBar from "./components/SearchBar";
+import Navbar from "./components/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/Home/index";
+import Products from "./components/Products";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Orders from "./components/Orders";
+import Cart from "./components/Cart";
+import Profile from "./components/Profile";
+import MobileSearch from "./components/MobileSearch";
+import Sidebar from "./components/Sidebar";
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <BrowserRouter>
+          <SearchBar />
+          <MobileSearch />
+          <Navbar />
+          <Sidebar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="profile" element={<Profile />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    );
+  }
+}
+
+export default App;
