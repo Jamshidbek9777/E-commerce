@@ -47,14 +47,15 @@ const SidebarMenu = styled.div`
 `;
 const Head = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid;
   margin-top: 20px;
 `;
 const UserImg = styled.div`
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   overflow: hidden;
 `;
@@ -64,35 +65,70 @@ const Img = styled.img`
 `;
 
 const UserDetails = styled.div`
+  gap: 10px;
   font-weight: 500;
+  display: flex;
 `;
-const Title = styled.p`
-  font-size: 13px;
-  color: #757575;
-  text-transform: uppercase;
-`;
+const Title = styled.p``;
 const Name = styled.p``;
 
 // Main
-const Nav = styled.div``;
-const Menu = styled.div`
-  gap: 10px;
+const SidebarItems = styled.div`
+  padding-top: 20px;
 `;
-const Items = styled.ul`
-  padding: 12px 8px;
-  gap: 20px;
+const Navs = styled.div`
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #dee2e7;
+  > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    > li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0px;
+    }
+  }
 `;
-const ItemsList = styled.li`
-  padding: 12px 8px;
-  list-style: none;
-  align-items: center;
-  height: 48px;
-  width: 260px;
-  transition: 0.3s all ease-in-out;
-  border-radius: 8px;
-  background-color: #f6f6f6;
+const Info = styled.div`
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #dee2e7;
+  > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    > li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0px;
+    }
+  }
 `;
-const MainTitle = styled.p``;
+const MoreInfo = styled.div`
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #dee2e7;
+  > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    > li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0px;
+    }
+  }
+`;
 export {
   Container,
   SidebarMenu,
@@ -102,9 +138,8 @@ export {
   Title,
   Name,
   Img,
-  Nav,
-  Menu,
-  MainTitle,
-  Items,
-  ItemsList,
+  SidebarItems,
+  Info,
+  MoreInfo,
+  Navs,
 };

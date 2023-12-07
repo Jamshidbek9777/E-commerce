@@ -1,5 +1,5 @@
 import React from "react";
-import ProfilePic from "../../assets/imgs/unknown.jpg";
+import Avatar from "../../assets/icons/avatar.svg";
 import {
   Container,
   SidebarMenu,
@@ -9,13 +9,18 @@ import {
   Title,
   Name,
   Img,
-  Nav,
-  Menu,
-  MainTitle,
-  Items,
-  ItemsList,
+  SidebarItems,
+  Info,
+  MoreInfo,
+  Navs,
 } from "./style";
-import HomeIcon from "../../assets//icons/home.svg";
+import HomeIcon from "../../assets/icons/home.svg";
+import List from "../../assets/icons/list.svg";
+import Favourites from "../../assets/icons/likedmobile.svg";
+import Order from "../../assets/icons/order.svg";
+import Language from "../../assets/icons/language.svg";
+import Contact from "../../assets/icons/contactus.svg";
+import About from "../../assets/icons/about.png";
 import { FaTimes } from "react-icons/fa";
 export const Sidebar = ({ active }) => {
   const closeSidebar = () => {
@@ -29,35 +34,65 @@ export const Sidebar = ({ active }) => {
             <FaTimes onClick={closeSidebar} />
             <Head>
               <UserImg>
-                <Img src={ProfilePic} alt="" />
+                <Img src={Avatar} alt="" />
               </UserImg>
               <UserDetails>
-                <Title>Web Developer</Title>
-                <Name>Jamshidbek</Name>
+                <Title>Sign in |</Title>
+                <Name>Register</Name>
               </UserDetails>
             </Head>
-            <Nav>
-              <Menu>
-                <Items>
-                  <ItemsList>
+            <SidebarItems>
+              <Navs>
+                <ul>
+                  <li>
+                    {" "}
                     <img src={HomeIcon} alt="" />
-                    <span>Home</span>
-                  </ItemsList>
-                  <ItemsList>
-                    <img src={HomeIcon} alt="" />
-                    <span>Home</span>
-                  </ItemsList>
-                  <ItemsList>
-                    <img src={HomeIcon} alt="" />
-                    <span>Home</span>
-                  </ItemsList>
-                  <ItemsList>
-                    <img src={HomeIcon} alt="" />
-                    <span>Home</span>
-                  </ItemsList>
-                </Items>
-              </Menu>
-            </Nav>
+                    Home
+                  </li>
+                  <li>
+                    {" "}
+                    <img src={List} alt="" />
+                    Categories
+                  </li>
+                  <li>
+                    {" "}
+                    <img src={Favourites} alt="" />
+                    Favourites
+                  </li>
+                  <li>
+                    {" "}
+                    <img src={Order} alt="" />
+                    My orders
+                  </li>
+                </ul>
+              </Navs>
+              <Info>
+                <ul>
+                  <li>
+                    {" "}
+                    <img src={Language} alt="" />
+                    English | USD
+                  </li>
+                  <li>
+                    {" "}
+                    <img src={Contact} alt="" />
+                    Contact us
+                  </li>
+                  <li>
+                    {" "}
+                    <img src={About} alt="" />
+                    About us
+                  </li>
+                </ul>
+              </Info>
+              <MoreInfo>
+                <ul>
+                  <li>User greement</li>
+                  <li>Partnership</li>
+                  <li>Privacy policy</li>
+                </ul>
+              </MoreInfo>
+            </SidebarItems>
           </SidebarMenu>
         </Container>
       )}

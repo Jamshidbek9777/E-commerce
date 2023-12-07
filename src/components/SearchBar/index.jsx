@@ -23,7 +23,6 @@ import {
   OuterHam,
 } from "./style";
 import Sidebar from "../Sidebar";
-
 const SearchBar = () => {
   const [sidebar, setSidebar] = useState(false);
   const navigate = useNavigate();
@@ -37,7 +36,7 @@ const SearchBar = () => {
         <MenuHam onClick={showSidebar}>
           <img src={Menu} alt="" />
         </MenuHam>
-        <img src={Logo} alt="" />
+        <img onClick={() => navigate("/home")} src={Logo} alt="" />
       </OuterHam>
       {sidebar && <Sidebar active={closeSidebar} />}
       <Middle>
@@ -64,7 +63,7 @@ const SearchBar = () => {
         <MobileProfile>
           <img src={Person} alt="" />
         </MobileProfile>
-        <MobileCartContainer>
+        <MobileCartContainer onClick={() => navigate("/cart")}>
           <img src={MobileCart} alt="" />
         </MobileCartContainer>
       </Mobile>

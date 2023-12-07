@@ -7,10 +7,10 @@ const NavContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 100px;
-  border-bottom: 1px solid #8b96a5;
+  padding: 20px 160px;
+  border-bottom: 1px solid #e0e0e0;
   transition: 0.5s all ease-in-out;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 930px) {
     /* justify-content: space-evenly; */
     padding: 10px 10px;
     border: none;
@@ -30,7 +30,7 @@ const Input = styled.input`
   display: flex;
   justify-content: center;
   text-align: center;
-  border: 1.5px solid #0d6efd;
+  border: 2px solid #0d6efd;
   transition: 0.5s all ease-in-out;
 
   @media screen and (max-width: 1120px) {
@@ -86,6 +86,7 @@ const CartContainer = styled.a`
   text-align: center;
 `;
 const ProfileContainer = styled.a`
+  margin-left: 50px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -137,7 +138,6 @@ const OuterHam = styled.div`
 `;
 const MainLogo = styled.img`
   padding-left: 20px;
-  
 `;
 export {
   NavContainer,

@@ -3,11 +3,11 @@ import styled from "styled-components";
 const NavContainer = styled.div`
   height: 56px;
   display: flex;
-  padding-left: 100px;
+  padding-left: 160px;
   gap: 20px;
-  border-bottom: 1px solid #8b96a5;
+  border-bottom: 1px solid #e0e0e0;
   transition: 0.5s all ease-in-out;
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 930px) {
     padding: 0px 100px;
     display: flex;
     justify-content: space-between;
