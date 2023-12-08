@@ -1,6 +1,6 @@
 import React from "react";
 import { MobileSearchContainer, MobileInput, SeachIcon } from "./style";
-import SearchLogo from "../../assets/icons/search.svg";
+import SearchLogo from "../../../assets/icons/search.svg";
 
 export const MobileSearch = () => {
   return (

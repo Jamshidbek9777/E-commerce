@@ -1,5 +1,5 @@
 import React from "react";
-import Avatar from "../../assets/icons/avatar.svg";
+import Avatar from "../../../assets/icons/avatar.svg";
 import {
   Container,
   SidebarMenu,
@@ -14,13 +14,13 @@ import {
   MoreInfo,
   Navs,
 } from "./style";
-import HomeIcon from "../../assets/icons/home.svg";
-import List from "../../assets/icons/list.svg";
-import Favourites from "../../assets/icons/likedmobile.svg";
-import Order from "../../assets/icons/order.svg";
-import Language from "../../assets/icons/language.svg";
-import Contact from "../../assets/icons/contactus.svg";
-import About from "../../assets/icons/about.png";
+import HomeIcon from "../../../assets/icons/home.svg";
+import List from "../../../assets/icons/list.svg";
+import Favourites from "../../../assets/icons/likedmobile.svg";
+import Order from "../../../assets/icons/order.svg";
+import Language from "../../../assets/icons/language.svg";
+import Contact from "../../../assets/icons/contactus.svg";
+import About from "../../../assets/icons/about.png";
 import { FaTimes } from "react-icons/fa";
 export const Sidebar = ({ active }) => {
   const closeSidebar = () => {

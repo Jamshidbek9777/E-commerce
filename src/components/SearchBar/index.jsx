@@ -22,7 +22,7 @@ import {
   MenuHam,
   OuterHam,
 } from "./style";
-import Sidebar from "../Sidebar";
+import Sidebar from "../Mobile/Sidebar";
 const SearchBar = () => {
   const [sidebar, setSidebar] = useState(false);
   const navigate = useNavigate();

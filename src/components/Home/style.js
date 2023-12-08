@@ -1,5 +1,9 @@
 import styled from "styled-components";
 const Main = styled.div`
+  @media screen and (max-width: 700px) {
+    padding: 0;
+    background-color: #fff;
+  }
   padding: 20px 160px;
   height: 100vh;
   background-color: #f7fafc;
@@ -7,7 +11,9 @@ const Main = styled.div`
 `;
 const CategoriesContainer = styled.div`
   transition: 0.5s all ease-in-out;
-
+  @media screen and (max-width: 700px) {
+    padding: 0;
+  }
   margin-top: 2px;
   padding: 17px 20px;
   display: flex;
@@ -62,17 +68,27 @@ const Categories = styled.div`
   }
 `;
 const ImagePlace = styled.div`
-  @media screen and (max-width: 670px) {
-    height: fit-content;
-    padding: auto;
-    width: fit-content;
-  }
   margin-top: 2px;
   position: relative;
+  background-color: #fff;
   > img {
+    @media screen and (max-width: 700px) {
+      /* margin-top: 20px; */
+      width: 100%;
+      height: auto;
+    }
     border-radius: 6px;
   }
   > p {
+    @media screen and (max-width: 560px) {
+      position: absolute;
+      top: 25px;
+      left: 26px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
     position: absolute;
     top: 56px;
     left: 44px;
@@ -81,10 +97,14 @@ const ImagePlace = styled.div`
     font-weight: 400;
     line-height: normal;
     > span {
+      @media screen and (max-width: 560px) {
+        font-size: 18px;
+        font-weight: 700;
+      }
       color: #1c1c1c;
       font-size: 32px;
       font-weight: 700;
-      /* line-height: normal; */
+      line-height: normal;
     }
   }
   > button {

@@ -10,8 +10,9 @@ import Contact from "./components/Contact";
 import Orders from "./components/Orders";
 import Cart from "./components/Cart";
 import Profile from "./components/Profile";
-import MobileSearch from "./components/MobileSearch";
-import Sidebar from "./components/Sidebar";
+import MobileSearch from "./components/Mobile/MobileSearch";
+import Sidebar from "./components/Mobile/Sidebar";
+import MobileCategories from "./components/Mobile/MobileCategories";
 class App extends Component {
   render() {
     return (
@@ -20,6 +21,7 @@ class App extends Component {
           <SearchBar />
           <MobileSearch />
           <Navbar />
+          <MobileCategories />
           <Sidebar />
           <Routes>
             <Route path="/" element={<Home />} />
