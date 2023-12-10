@@ -5,7 +5,7 @@ const Main = styled.div`
     background-color: #fff;
   }
   padding: 20px 160px;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #f7fafc;
   transition: 0.5s all ease-in-out;
 `;
@@ -21,14 +21,14 @@ const CategoriesContainer = styled.div`
   border: 2px solid #dee2e7;
   background-color: #fff;
   justify-content: space-between;
-  @media screen and (max-width: 1216px) {
+  @media screen and (max-width: 1133px) {
     border: none;
     background-color: #f7fafc;
     justify-content: center;
   }
 `;
 const Categories = styled.div`
-  @media screen and (max-width: 1216px) {
+  @media screen and (max-width: 1133px) {
     display: none;
   }
   border: 1px solid #dee2e7;

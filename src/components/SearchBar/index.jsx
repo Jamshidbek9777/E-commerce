@@ -26,7 +26,6 @@ import Sidebar from "../Mobile/Sidebar";
 const SearchBar = () => {
   const [sidebar, setSidebar] = useState(false);
   const navigate = useNavigate();
-
   const showSidebar = () => setSidebar(true);
   const closeSidebar = () => setSidebar(false);
 
