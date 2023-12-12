@@ -1,6 +1,7 @@
 import React from "react";
 import Categories from "./Categories/index";
 import Offers from "./Offers";
+import  { CarouselCard } from "./Carousel";
 // import MobileOffers from "../Mobile/MobileOffers";
 // import Recommended from "./Recommended";
 // import Recommended2 from "./Recommended2";
@@ -10,6 +11,7 @@ export const Home = () => {
     <div>
       <Categories />
       <Offers />
+      <CarouselCard />
       {/* <MobileOffers /> */}
       {/* <Recommended /> */}
       {/* <Recommended2 /> */}

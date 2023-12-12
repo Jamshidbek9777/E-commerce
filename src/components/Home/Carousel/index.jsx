@@ -1,4 +1,5 @@
 import React from "react";
+import { Carousel } from "antd";
 import {
   Container,
   OffersContainer,
@@ -12,49 +13,51 @@ import {
   DiscountPrice,
 } from "./style";
 import Phone from "../../../assets/imgs/image2.png";
-export const Offers = () => {
+export const CarouselCard = () => {
   return (
     <Container>
       <OffersContainer>
         <h1> Offers in smartphones</h1>
         <Products>
-          <ProductCard>
-            <DiscountPrice>56% off</DiscountPrice>
-            <Image>
-              <img src={Phone} alt="" />
-            </Image>
-            <Description>
-              <Name>Galaxy A53(6 | 64)</Name>
-              <Price> 250$</Price>
-              <Discount> Save 95$</Discount>
-            </Description>
-          </ProductCard>
-          <ProductCard>
-            {" "}
-            <DiscountPrice>56% off</DiscountPrice>
-            <Image>
-              <img src={Phone} alt="" />
-            </Image>
-            <Description>
-              <Name>Galaxy A53(6 | 64)</Name>
-              <Price> 250$</Price>
-              <Discount> Save 95$</Discount>
-            </Description>
-          </ProductCard>
-          <ProductCard>
-            {" "}
-            <Image>
+          <Carousel autoplay={true} dots={true} draggable>
+            <ProductCard>
               <DiscountPrice>56% off</DiscountPrice>
-
-              <img src={Phone} alt="" />
+              <Image>
+                <img src={Phone} alt="" />
+              </Image>
+              <Description>
+                <Name>Galaxy A53(6 | 64)</Name>
+                <Price> 250$</Price>
+                <Discount> Save 95$</Discount>
+              </Description>
+            </ProductCard>
+            <ProductCard>
+              {" "}
+              <DiscountPrice>56% off</DiscountPrice>
+              <Image>
+                <img src={Phone} alt="" />
+              </Image>
+              <Description>
+                <Name>Galaxy A53(6 | 64)</Name>
+                <Price> 250$</Price>
+                <Discount> Save 95$</Discount>
+              </Description>
+            </ProductCard>
+          </Carousel>
+          {/* <ProductCard>
+            {" "}
+            <Image>
+            <DiscountPrice>56% off</DiscountPrice>
+            
+            <img src={Phone} alt="" />
             </Image>
             <Description>
               <Name>Galaxy A53(6 | 64)</Name>
               <Price> 250$</Price>
               <Discount> Save 95$</Discount>
             </Description>
-          </ProductCard>
-          <ProductCard>
+            </ProductCard>
+            <ProductCard>
             {" "}
             <DiscountPrice>56% off</DiscountPrice>
             <Image>
@@ -77,10 +80,10 @@ export const Offers = () => {
               <Price> 250$</Price>
               <Discount> Save 95$</Discount>
             </Description>
-          </ProductCard>
+          </ProductCard> */}
         </Products>
       </OffersContainer>
     </Container>
   );
 };
-export default Offers;
+export default CarouselCard;

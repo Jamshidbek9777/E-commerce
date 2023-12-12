@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 const Container = styled.div`
+  display: none;
+  @media screen and (max-width: 820px) {
+    display: block;
+  }
   width: 100%;
   background-color: #f7fafc;
-  padding: 0px 160px 20px 160px;
-  @media screen and (max-width: 975px) {
-    padding: 0px 25px 0px 25px;
-  }
-  @media screen and (max-width: 820px) {
+  padding: 20px 40px 20px 40px;
+  /* @media screen and (max-width: 820px) {
     padding: 0px 200px 0px 200px;
-    display: none;
-  }
+  } */
 `;
 const OffersContainer = styled.div`
   > h1 {
@@ -22,22 +22,11 @@ const OffersContainer = styled.div`
     font-weight: 700;
     line-height: 30px; /* 125% */
   }
-  display: flex;
-  flex-direction: column;
-  @media screen and (max-width: 820px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  /* align-items: center; */
   text-align: center;
 `;
 const Products = styled.div`
-  gap: 15px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* overflow: scroll; */
 `;
 const ProductCard = styled.div`
   position: relative;
@@ -48,9 +37,9 @@ const ProductCard = styled.div`
     border: 1px solid #008ecc;
   }
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
-  /* text-align: center; */
+  text-align: center;
   width: 215px;
   height: 295px;
   flex-shrink: 0;
@@ -77,6 +66,7 @@ const Description = styled.div`
   @media screen and (max-width: 975px) {
     padding: 0px 50px 10px 50px;
     border-radius: 16px;
+    margin: 0px 15px;
     border: 1px solid #dee2e7;
   }
   background-color: #fff;
@@ -86,6 +76,8 @@ const Description = styled.div`
 `;
 const Image = styled.div`
   /* position: relative; */
+  display: flex;
+  justify-content: center;
 `;
 const Name = styled.p`
   color: var(--HEading, #222);

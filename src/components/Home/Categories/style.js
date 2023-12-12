@@ -70,7 +70,7 @@ const Categories = styled.div`
 const ImagePlace = styled.div`
   margin-top: 2px;
   position: relative;
-  background-color: #fff;
+  /* background-color: #fff; */
   > img {
     @media screen and (max-width: 700px) {
       /* margin-top: 20px; */
