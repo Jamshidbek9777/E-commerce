@@ -2,78 +2,83 @@ import React from "react";
 import {
   Container,
   OffersContainer,
-  Time,
   Products,
   ProductCard,
-  TimeSection,
-  Days,
-  Hours,
-  Min,
-  Sec,
+  Description,
+  Image,
+  Name,
+  Price,
+  Discount,
+  DiscountPrice,
 } from "./style";
-import Watch from "../../../assets/imgs/smartwatch.png";
-import Notebook from "../../../assets/imgs/7.png";
-import Camera from "../../../assets/imgs/gopro.png";
-import GamingHeadphones from "../../../assets/imgs/gamingheadphoes.png";
-import Phone from "../../../assets/imgs/phone.png";
-import Headphones from "../../../assets/imgs/headphones.png";
-
+import Phone from "../../../assets/imgs/image2.png";
 export const Offers = () => {
   return (
     <Container>
       <OffersContainer>
-        <Time>
-          <div>
-            {" "}
-            <h2>Deals and Offers</h2>
-            <p>Hygiene equipments</p>
-          </div>
-          <TimeSection>
-            <Days>
-              <p>02</p> <h5>Days</h5>{" "}
-            </Days>
-            <Hours>
-              <p>08</p> <h5>Hours</h5>{" "}
-            </Hours>
-            <Min>
-              <p>22</p> <h5>Min</h5>{" "}
-            </Min>
-            <Sec>
-              <p>32</p> <h5>Sec</h5>{" "}
-            </Sec>
-          </TimeSection>
-        </Time>
+        <h1> Offers in smartphones</h1>
         <Products>
           <ProductCard>
-            <img className="watch" src={Watch} alt="" />
-            <h5>Smart watches</h5>
-            <p>-25%</p>
+            <DiscountPrice>56% off</DiscountPrice>
+            <Image>
+              <img src={Phone} alt="" />
+            </Image>
+            <Description>
+              <Name>Galaxy A53(6 | 64)</Name>
+              <Price> 250$</Price>
+              <Discount> Save 95$</Discount>
+            </Description>
           </ProductCard>
-          <ProductCard className="notebook">
-            <img className="notebook" src={Notebook} alt="" />
-            <h5>Laptops</h5>
-            <p>-15%</p>
+          <ProductCard>
+            {" "}
+            <DiscountPrice>56% off</DiscountPrice>
+            <Image>
+              <img src={Phone} alt="" />
+            </Image>
+            <Description>
+              <Name>Galaxy A53(6 | 64)</Name>
+              <Price> 250$</Price>
+              <Discount> Save 95$</Discount>
+            </Description>
           </ProductCard>
-          <ProductCard className="camera">
-            <img className="camera" src={Camera} alt="" />
-            <h5>GoPro Cameras</h5>
-            <p>-45%</p>
+          <ProductCard>
+            {" "}
+            <Image>
+              <DiscountPrice>56% off</DiscountPrice>
+
+              <img src={Phone} alt="" />
+            </Image>
+            <Description>
+              <Name>Galaxy A53(6 | 64)</Name>
+              <Price> 250$</Price>
+              <Discount> Save 95$</Discount>
+            </Description>
           </ProductCard>
-          <ProductCard className="gaming">
-            <img className="gaming" src={GamingHeadphones} alt="" />
-            <h5>Gaming Headphones</h5>
-            <p>-55%</p>
+          <ProductCard>
+            {" "}
+            <DiscountPrice>56% off</DiscountPrice>
+            <Image>
+              <img src={Phone} alt="" />
+            </Image>
+            <Description>
+              <Name>Galaxy A53(6 | 64)</Name>
+              <Price> 250$</Price>
+              <Discount> Save 95$</Discount>
+            </Description>
           </ProductCard>
-          <ProductCard className="phone">
-            <img className="phone" src={Phone} alt="" />
-            <h5>Phones</h5>
-            <p>-35%</p>
+          <ProductCard>
+            {" "}
+            <DiscountPrice>56% off</DiscountPrice>
+            <Image>
+              <img src={Phone} alt="" />
+            </Image>
+            <Description>
+              <Name>Galaxy A53(6 | 64)</Name>
+              <Price> 250$</Price>
+              <Discount> Save 95$</Discount>
+            </Description>
           </ProductCard>
-          <ProductCard className="headphone">
-            <img className="headphone" src={Headphones} alt="" />
-            <h5>Headphones</h5>
-            <p>-25%</p>
-          </ProductCard>
+       
         </Products>
       </OffersContainer>
     </Container>

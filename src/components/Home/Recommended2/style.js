@@ -58,8 +58,8 @@ const RightContainer = styled.div``;
 const Cards = styled.div`
   margin-left: 180px;
   display: grid;
-  /* gap: 1px;
-  margin-right: 10px; */
+  /* gap: 1px; */
+  /* margin-right: 10px; */
   grid-template-columns: repeat(5, 1fr);
 `;
 const Card = styled.div`

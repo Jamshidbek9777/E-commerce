@@ -1,288 +1,147 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  /* border: 1px solid red; */
+  width: 100%;
+  /* height: 450px; */
   background-color: #f7fafc;
   padding: 0px 160px 20px 160px;
   @media screen and (max-width: 975px) {
-    display: none;
+    padding: 0px 25px 0px 25px;
+  }
+  @media screen and (max-width: 820px) {
+    padding: 0px 200px 0px 200px;
   }
 `;
 const OffersContainer = styled.div`
-  display: flex;
-  height: 240px;
-  justify-content: flex-start;
-  background-color: #fff;
-  border-radius: 6px;
-  border: 2px solid #dee2e7;
-  @media screen and (max-width: 975px) {
-    flex-direction: column;
-    height: 345px;
+  > h1 {
+    font-size: 20px;
+    margin-top: 50px;
+    color: var(--Text, #666);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 125% */
   }
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 820px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /* align-items: center; */
+  text-align: center;
 `;
 const Products = styled.div`
-  > .headphone {
-    @media screen and (max-width: 1700px) {
-      display: none;
-    }
-    @media screen and (max-width: 975px) {
-      display: flex;
-    }
-  }
-  > .phone {
-    @media screen and (max-width: 1700px) {
-      margin-right: 10px;
-    }
-    @media screen and (max-width: 1516px) {
-      display: none;
-    }
-  }
-  > .gaming {
-    @media screen and (max-width: 1516px) {
-      margin-right: 10px;
-    }
-    @media screen and (max-width: 1330px) {
-      display: none;
-    }
-  }
-  > .camera {
-    @media screen and (max-width: 1330px) {
-      margin-right: 10px;
-    }
-    @media screen and (max-width: 1137px) {
-      display: none;
-    }
-  }
-  > .notebook {
-    @media screen and (max-width: 1137px) {
-      display: none;
-      margin-right: 10px;
-    }
-  }
-  gap: 10px;
+  gap: 15px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 `;
 const ProductCard = styled.div`
+  position: relative;
+  margin-top: 20px;
   transition: 0.2s all ease-in-out;
   &:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: scale(1.01);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #008ecc;
   }
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  text-align: center;
-  width: 179px;
-  height: 230px;
-  border-radius: 6px;
+  /* text-align: center; */
+  width: 215px;
+  height: 295px;
+  flex-shrink: 0;
+  border-radius: 16px;
   flex-shrink: 0;
   border: 1px solid #dee2e7;
-  > h5 {
-    margin-top: 8px;
-    color: var(--dark, #1c1c1c);
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-  }
-  > p {
-    display: inline-flex;
-    height: 28px;
-    padding: 3px 13px 4px 13px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    border-radius: 29px;
-    background: #ffe3e3;
-    color: #eb001b;
-    text-align: center;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: -0.2px;
-    margin-top: 7px;
-  }
-  > img {
+  @media screen and (max-width: 975px) {
+    position: relative;
+    transition: 0.2s all ease-in-out;
     display: flex;
-    width: 140px;
-    height: 140px;
-    padding: 6.222px 13.689px 5.6px 13.689px;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    width: 375px;
+    height: 305px;
     flex-shrink: 0;
-  }
-  > img.watch {
-    display: flex;
-    width: 140px;
-    height: 140px;
-    padding: 9.333px 19.289px;
-    justify-content: center;
-    align-items: center;
+    border-radius: 16px;
     flex-shrink: 0;
-  }
-  > img.notebook {
-    width: 140px;
-    height: 140px;
-    flex-shrink: 0;
-  }
-  > img.camera {
-    display: flex;
-    width: 140px;
-    height: 140px;
-    padding: 24.267px 4.978px 24.267px 5.6px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-  }
-  > img.gaming {
-    display: flex;
-    width: 140px;
-    height: 140px;
-    padding: 6.222px 13.689px 5.6px 13.689px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-  }
-  > img.phone {
-    display: flex;
-    width: 140px;
-    height: 140px;
-    padding: 7.467px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-  }
-  > img.headphone {
-    display: flex;
-    width: 140px;
-    height: 140px;
-    padding: 7.467px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
+    border: 1px solid #dee2e7;
   }
 `;
-const Time = styled.div`
-  @media screen and (max-width: 975px) {
-    display: flex;
-  }
-  width: 460px;
-  padding: 20px 20px;
 
-  > h2 {
-    color: var(--base-color-dark, #1c1c1c);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 28px; /* 140% */
-    letter-spacing: -0.2px;
-  }
-  > p {
-    color: var(--gray-500, #8b96a5);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-`;
-const TimeSection = styled.div`
+const Title = styled.div``;
+const Description = styled.div`
   @media screen and (max-width: 975px) {
-    margin-top: 0;
+    padding: 0px 50px 10px 50px;
+    border-radius: 16px;
   }
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
+  background-color: #fff;
+  padding: 0px 30px 10px 30px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
 `;
-const Days = styled.div`
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 45px;
-  height: 50px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  background: var(--base-color-gray-800, #606060);
-  > p {
-    font-weight: 700;
-  }
-  > h5 {
-    font-weight: 300;
-    font-size: 12px;
-  }
+const Image = styled.div`
+  /* position: relative; */
 `;
-const Hours = styled.div`
-  color: #fff;
-  align-items: center;
-  text-align: center;
-  width: 45px;
-  height: 50px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  background: var(--base-color-gray-800, #606060);
-  > p {
-    font-weight: 700;
-  }
-  > h5 {
-    font-size: 12px;
-    font-weight: 300;
-  }
+const Name = styled.p`
+  color: var(--HEading, #222);
+  font-size: 16px;
+  font-style: normal;
+
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+  margin-top: 12px;
 `;
-const Min = styled.div`
-  display: flex;
-  color: #fff;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 45px;
-  height: 50px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  background: var(--base-color-gray-800, #606060);
-  > p {
-    font-weight: 700;
-    font-size: 16px;
-  }
-  > h5 {
-    font-weight: 300;
-  }
+const Price = styled.p`
+  border-bottom: 1px solid #ededed;
+  margin-top: 10px;
+  color: var(--HEading, #222);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 112.5% */
 `;
-const Sec = styled.div`
-  color: #fff;
-  align-items: center;
-  text-align: center;
+const Discount = styled.p`
+  margin-top: 10px;
+  color: #249b3e;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+`;
+
+const DiscountPrice = styled.span`
   display: flex;
-  flex-direction: column;
-  width: 45px;
-  height: 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0px 16px;
+  background: var(--Primary, #008ecc);
+  color: #fff;
+  position: absolute;
+  right: 0.2px;
+  width: 40px;
+  height: 45px;
   flex-shrink: 0;
-  border-radius: 4px;
-  background: var(--base-color-gray-800, #606060);
-  > p {
-    font-weight: 700;
-  }
-  > h5 {
-    font-weight: 300;
-    font-size: 12px;
+  font-size: 12px;
+  @media screen and (max-width: 975px) {
+    width: 53px;
+    height: 57px;
   }
 `;
 export {
   Container,
   OffersContainer,
   Products,
-  Time,
   ProductCard,
-  TimeSection,
-  Days,
-  Hours,
-  Min,
-  Sec,
+  Title,
+  Description,
+  Image,
+  Name,
+  Price,
+  Discount,
+  DiscountPrice,
 };

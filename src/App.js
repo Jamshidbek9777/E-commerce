@@ -9,7 +9,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Orders from "./components/Orders";
 import Cart from "./components/Cart";
-import Profile from "./components/Profile";
+// import Profile from "./components/Profile";
 import MobileSearch from "./components/Mobile/MobileSearch";
 import Sidebar from "./components/Mobile/Sidebar";
 import MobileCategories from "./components/Mobile/MobileCategories";
@@ -31,7 +31,7 @@ class App extends Component {
             <Route path="/contact" element={<Contact />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="profile" element={<Profile />} />
+            {/* <Route path="profile" element={<Profile />} /> */}
           </Routes>
         </BrowserRouter>
       </div>

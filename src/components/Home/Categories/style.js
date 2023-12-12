@@ -120,7 +120,7 @@ const ImagePlace = styled.div`
     align-items: center;
     gap: 10px;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 16px;
     color: #1c1c1c;
     background-color: #fff;
     cursor: pointer;

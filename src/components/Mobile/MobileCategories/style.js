@@ -26,7 +26,7 @@ const Container = styled.div`
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        border-radius: 6px;
+        border-radius: 16px;
         background: var(--gray-200, #eff2f4);
       }
     }

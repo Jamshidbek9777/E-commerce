@@ -28,7 +28,6 @@ export const Home = () => {
             <li>Computer and tech</li>
             <li>Tools, equipments</li>
             <li>Sports and outdoor</li>
-            <li>Animal and pets</li>
             <li>Machinery tools</li>
             <li>More category</li>
             <li>More category</li>

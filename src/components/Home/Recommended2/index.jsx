@@ -9,7 +9,7 @@ import {
 } from "./style";
 import LeftImg from "../../../assets/imgs/3.png";
 import Chair from "../../../assets/imgs/chair.png";
-export const Recommended = () => {
+export const Recommended2 = () => {
   return (
     <div>
       <Container>
@@ -103,4 +103,4 @@ export const Recommended = () => {
     </div>
   );
 };
-export default Recommended;
+export default Recommended2;

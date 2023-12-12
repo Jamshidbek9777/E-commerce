@@ -16,7 +16,7 @@ const MobileInput = styled.input`
     width: 330px;
     height: 40px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 16px;
     border: 1px solid #dee2e7;
     background-color: #eff2f4;
     text-align: center;
