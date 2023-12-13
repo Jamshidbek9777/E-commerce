@@ -8,9 +8,6 @@ const Container = styled.div`
   width: 100%;
   background-color: #f7fafc;
   padding: 20px 40px 20px 40px;
-  /* @media screen and (max-width: 820px) {
-    padding: 0px 200px 0px 200px;
-  } */
 `;
 const OffersContainer = styled.div`
   > h1 {
@@ -20,14 +17,11 @@ const OffersContainer = styled.div`
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 30px; /* 125% */
+    line-height: 30px;
   }
   text-align: center;
 `;
-const Products = styled.div`
-  /* display: flex; */
-  /* overflow: scroll; */
-`;
+const Products = styled.div``;
 const ProductCard = styled.div`
   position: relative;
   margin-top: 20px;
@@ -37,14 +31,11 @@ const ProductCard = styled.div`
     border: 1px solid #008ecc;
   }
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   text-align: center;
   width: 215px;
   height: 295px;
-  flex-shrink: 0;
   border-radius: 16px;
-  flex-shrink: 0;
   border: 1px solid #dee2e7;
   @media screen and (max-width: 975px) {
     position: relative;
@@ -75,7 +66,6 @@ const Description = styled.div`
   border-bottom-right-radius: 16px;
 `;
 const Image = styled.div`
-  /* position: relative; */
   display: flex;
   justify-content: center;
 `;
@@ -85,7 +75,7 @@ const Name = styled.p`
   font-style: normal;
 
   font-weight: 600;
-  line-height: 18px; /* 112.5% */
+  line-height: 18px;
   margin-top: 12px;
 `;
 const Price = styled.p`
@@ -125,6 +115,22 @@ const DiscountPrice = styled.span`
     height: 57px;
   }
 `;
+const LeftArrow = styled.div`
+  position: absolute;
+  top: 120px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+`;
+const RightArrow = styled.div`
+  transform: rotate(180deg);
+  position: absolute;
+  top: 120px;
+  right: 1px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+`;
 export {
   Container,
   OffersContainer,
@@ -137,4 +143,6 @@ export {
   Price,
   Discount,
   DiscountPrice,
+  LeftArrow,
+  RightArrow,
 };

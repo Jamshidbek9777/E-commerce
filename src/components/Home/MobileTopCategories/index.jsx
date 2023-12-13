@@ -9,13 +9,14 @@ import {
   Name,
 } from "./style";
 import Phone from "../../../assets/imgs/watch1.png";
-export const TopCategories = () => {
+import { Carousel } from "antd";
+export const MobileTopCategories = () => {
   return (
     <Container>
       <OffersContainer>
         <h1> Shop From Top Categories</h1>
         <Products>
-          
+          <Carousel autoplay={true} autoplaySpeed={5000} dots={true} draggable>
             <ProductCard>
               <Image>
                 <img src={Phone} alt="" />
@@ -78,9 +79,10 @@ export const TopCategories = () => {
                 <Name>Watches</Name>
               </Description>
             </ProductCard>
+          </Carousel>
         </Products>
       </OffersContainer>
     </Container>
   );
 };
-export default TopCategories;
+export default MobileTopCategories;

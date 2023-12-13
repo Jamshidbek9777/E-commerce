@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 100%;
-  background-color: #f7fafc;
-  padding: 0px 160px 20px 160px;
-  @media screen and (max-width: 975px) {
-    padding: 0px 25px 0px 25px;
-  }
+  display: none;
   @media screen and (max-width: 820px) {
-    padding: 0px 200px 0px 200px;
-    display: none;
+    display: block;
+    width: 100%;
+    background-color: #f7fafc;
+    padding: 20px 160px 20px 160px;
+    @media screen and (max-width: 975px) {
+      padding: 20px 40px 20px 40px;
+    }
   }
 `;
 const OffersContainer = styled.div`
@@ -22,31 +22,19 @@ const OffersContainer = styled.div`
     font-weight: 700;
     line-height: 30px; /* 125% */
   }
-  display: flex;
-  flex-direction: column;
-  @media screen and (max-width: 820px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  /* align-items: center; */
   text-align: center;
 `;
-const Products = styled.div`
-  gap: 15px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-`;
+const Products = styled.div``;
 const ProductCard = styled.div`
+  position: relative;
+  margin-top: 20px;
+  transition: 0.2s all ease-in-out;
   display: flex;
   width: 132px;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-top: 25px;
   @media screen and (max-width: 975px) {
     position: relative;
     transition: 0.2s all ease-in-out;
@@ -56,27 +44,27 @@ const ProductCard = styled.div`
     width: 375px;
     height: 305px;
     border-radius: 16px;
-    border: 1px solid #dee2e7;
   }
 `;
 
 const Description = styled.div`
   @media screen and (max-width: 975px) {
-    padding: 0px 50px 10px 50px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
     border-radius: 16px;
     border: 1px solid #dee2e7;
+    border-radius: 16px;
   }
   background-color: #fff;
-  padding: 7px 35px 10px 35px;
+  padding: 0px 30px 10px 30px;
   border-radius: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 const Image = styled.div`
-  /* position: relative; */
   margin: auto;
-  /* margin-top: ; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,6 +85,7 @@ const Name = styled.p`
   font-style: normal;
   font-weight: 600;
   line-height: 18px; /* 112.5% */
+  margin-top: 12px;
 `;
 
 export {

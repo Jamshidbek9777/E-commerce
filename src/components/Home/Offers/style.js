@@ -51,11 +51,10 @@ const ProductCard = styled.div`
   flex-direction: column;
   align-items: center;
   /* text-align: center; */
-  width: 215px;
+  width: 225px;
   height: 295px;
   flex-shrink: 0;
   border-radius: 16px;
-  flex-shrink: 0;
   border: 1px solid #dee2e7;
   @media screen and (max-width: 975px) {
     position: relative;
@@ -65,14 +64,11 @@ const ProductCard = styled.div`
     align-items: center;
     width: 375px;
     height: 305px;
-    flex-shrink: 0;
     border-radius: 16px;
-    flex-shrink: 0;
     border: 1px solid #dee2e7;
   }
 `;
 
-const Title = styled.div``;
 const Description = styled.div`
   @media screen and (max-width: 975px) {
     padding: 0px 50px 10px 50px;
@@ -80,7 +76,7 @@ const Description = styled.div`
     border: 1px solid #dee2e7;
   }
   background-color: #fff;
-  padding: 0px 30px 10px 30px;
+  padding: 0px 34px 10px 34px;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
 `;
@@ -138,7 +134,6 @@ export {
   OffersContainer,
   Products,
   ProductCard,
-  Title,
   Description,
   Image,
   Name,
