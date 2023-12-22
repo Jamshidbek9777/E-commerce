@@ -2,166 +2,147 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: none;
-  @media screen and (max-width: 975px) {
+  @media screen and (max-width: 820px) {
     display: block;
-    padding: 20px 160px;
-    @media screen and (max-width: 930px) {
-      padding: 20px 10px;
-    }
-    @media screen and (max-width: 620px) {
-      padding: 20px 40px;
-    }
   }
+  width: 100%;
+  background-color: #f7fafc;
+  padding: 20px 40px 20px 40px;
 `;
-const OffersContainer = styled.div``;
-const Time = styled.div`
-  display: flex;
-  justify-content: space-between;
-  > div {
-    > h2 {
-      color: var(--base-color-dark, #1c1c1c);
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 28px;
-      letter-spacing: -0.2px;
-    }
-    > p {
-      color: var(--gray-500, #8b96a5);
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
-  }
-`;
-const TimeSection = styled.div`
-  display: flex;
-  gap: 4px;
-`;
-
-const Hours = styled.div`
-  color: #8b96a5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 45px;
-  height: 50px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  background: var(--base-color-gray-800, #eff2f4);
-  > p {
+const OffersContainer = styled.div`
+  > h1 {
+    font-size: 20px;
+    margin-top: 50px;
+    color: var(--Text, #666);
+    font-size: 24px;
+    font-style: normal;
     font-weight: 700;
+    line-height: 30px;
   }
-  > h5 {
-    font-weight: 300;
-    font-size: 12px;
-  }
-`;
-const Min = styled.div`
-  color: #8b96a5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
-  width: 45px;
-  height: 50px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  background: var(--base-color-gray-800, #eff2f4);
-  > p {
-    font-weight: 700;
-  }
-  > h5 {
-    font-weight: 300;
-    font-size: 12px;
-  }
 `;
-const Sec = styled.div`
-  color: #8b96a5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 45px;
-  height: 50px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  background: var(--base-color-gray-800, #eff2f4);
-  > p {
-    font-weight: 700;
-  }
-  > h5 {
-    font-weight: 300;
-    font-size: 12px;
-  }
-`;
-const Products = styled.div`
-  display: flex;
-  overflow: scroll;
-  display: flex;
-  margin-top: 20px;
-  /* padding: 8px 13.374px 18px 14px; */
-  border: 1px solid #dee2e7;
-  border-radius: 6px;
-  align-items: center;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`;
+const Products = styled.div``;
 const ProductCard = styled.div`
-  width: 180px;
-  height: 180px;
-  padding: 0 20px;
-  border-left: 1px solid #dee2e7;
-  border-right: 1px solid #dee2e7;
+  position: relative;
+  margin-top: 20px;
+  transition: 0.2s all ease-in-out;
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #008ecc;
+  }
+  display: flex;
+  align-items: center;
   text-align: center;
-  > img {
-    width: 98px;
-    height: 98px;
-    /* height: 98px; */
-  }
-  > h5 {
-    color: var(--dark, #1c1c1c);
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    margin-top: 8px;
-  }
-  > p {
-    display: inline-flex;
-    height: 28px;
-    padding: 3px 13px 4px 13px;
-    justify-content: center;
+  width: 215px;
+  height: 295px;
+  border-radius: 16px;
+  border: 1px solid #dee2e7;
+  @media screen and (max-width: 975px) {
+    position: relative;
+    transition: 0.2s all ease-in-out;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 10px;
+    width: 375px;
+    height: 305px;
     flex-shrink: 0;
-    border-radius: 29px;
-    background: #ffe3e3;
-    color: #eb001b;
-    text-align: center;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: -0.2px;
-    margin-top: 7px;
+    border-radius: 16px;
+    flex-shrink: 0;
+    border: 1px solid #dee2e7;
   }
 `;
 
+const Title = styled.div``;
+const Description = styled.div`
+  @media screen and (max-width: 975px) {
+    padding: 0px 50px 10px 50px;
+    border-radius: 16px;
+    margin: 0px 15px;
+    border: 1px solid #dee2e7;
+  }
+  background-color: #fff;
+  padding: 0px 30px 10px 30px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+`;
+const Image = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+const Name = styled.p`
+  color: var(--HEading, #222);
+  font-size: 16px;
+  font-style: normal;
+
+  font-weight: 600;
+  line-height: 18px;
+  margin-top: 12px;
+`;
+const Price = styled.p`
+  border-bottom: 1px solid #ededed;
+  margin-top: 10px;
+  color: var(--HEading, #222);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 112.5% */
+`;
+const Discount = styled.p`
+  margin-top: 10px;
+  color: #249b3e;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+`;
+
+const DiscountPrice = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0px 16px;
+  background: var(--Primary, #008ecc);
+  color: #fff;
+  position: absolute;
+  right: 0.2px;
+  width: 40px;
+  height: 45px;
+  flex-shrink: 0;
+  font-size: 12px;
+  @media screen and (max-width: 975px) {
+    width: 53px;
+    height: 57px;
+  }
+`;
+const LeftArrow = styled.div`
+  position: absolute;
+  top: 120px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+`;
+const RightArrow = styled.div`
+  transform: rotate(180deg);
+  position: absolute;
+  top: 120px;
+  right: 1px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+`;
 export {
   Container,
   OffersContainer,
-  Time,
-  TimeSection,
-  Hours,
-  Min,
-  Sec,
   Products,
   ProductCard,
+  Title,
+  Description,
+  Image,
+  Name,
+  Price,
+  Discount,
+  DiscountPrice,
+  LeftArrow,
+  RightArrow,
 };
