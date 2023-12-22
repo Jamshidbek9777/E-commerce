@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { Carousel } from "antd";
 import {
   Container,
   OffersContainer,
@@ -8,15 +7,14 @@ import {
   Description,
   Image,
   Name,
-  Price,
-  Discount,
-  DiscountPrice,
   LeftArrow,
   RightArrow,
 } from "./style";
-import Phone from "../../../assets/imgs/a54.png";
+import Phone from "../../../assets/imgs/watch1.png";
 import Arrow from "../../../assets/icons/arrow.svg";
-export const CarouselCard = () => {
+import data from "../../../data/topcategories/data";
+import { Carousel } from "antd";
+export const MobileTopCategories = () => {
   const carouselRef = useRef(null);
 
   const handlePrev = () => {
@@ -33,30 +31,107 @@ export const CarouselCard = () => {
   return (
     <Container>
       <OffersContainer>
-        <h1> Offers in smartphones</h1>
+        <h1> Shop From Top Categories</h1>
         <Products>
           <Carousel
-            ref={carouselRef}
             autoplay={true}
-            autoplaySpeed={8000}
-            dots={true}
+            autoplaySpeed={5000}
             draggable
+            ref={carouselRef}
           >
+            {data.map((item, index) => (
+              <ProductCard key={index}>
+                <LeftArrow onClick={handlePrev}>
+                  <img src={Arrow} alt="" />
+                </LeftArrow>
+                <RightArrow onClick={handleNext}>
+                  <img src={Arrow} alt="" />
+                </RightArrow>
+                <Image>
+                  <img src={item.src} alt="" />
+                </Image>
+                <Description>
+                  <Name>{item.name}</Name>
+                </Description>
+              </ProductCard>
+            ))}
+            {/* <ProductCard>
+           
+              <Image>
+                <img src={Phone} alt="" />
+              </Image>
+              <Description>
+                <Name>Watches</Name>
+              </Description>
+            </ProductCard>
             <ProductCard>
               <LeftArrow onClick={handlePrev}>
                 <img src={Arrow} alt="" />
               </LeftArrow>
               <RightArrow onClick={handleNext}>
                 <img src={Arrow} alt="" />
-              </RightArrow>
-              <DiscountPrice>56% off</DiscountPrice>
+              </RightArrow>{" "}
               <Image>
                 <img src={Phone} alt="" />
               </Image>
               <Description>
-                <Name>Galaxy A53(6 | 512)</Name>
-                <Price> 250$</Price>
-                <Discount> Save 95$</Discount>
+                <Name>Watches</Name>
+              </Description>
+            </ProductCard>
+            <ProductCard>
+              <LeftArrow onClick={handlePrev}>
+                <img src={Arrow} alt="" />
+              </LeftArrow>
+              <RightArrow onClick={handleNext}>
+                <img src={Arrow} alt="" />
+              </RightArrow>{" "}
+              <Image>
+                <img src={Phone} alt="" />
+              </Image>
+              <Description>
+                <Name>Watches</Name>
+              </Description>
+            </ProductCard>
+            <ProductCard>
+              <LeftArrow onClick={handlePrev}>
+                <img src={Arrow} alt="" />
+              </LeftArrow>
+              <RightArrow onClick={handleNext}>
+                <img src={Arrow} alt="" />
+              </RightArrow>{" "}
+              <Image>
+                <img src={Phone} alt="" />
+              </Image>
+              <Description>
+                <Name>Watches</Name>
+              </Description>
+            </ProductCard>
+            <ProductCard>
+              <LeftArrow onClick={handlePrev}>
+                <img src={Arrow} alt="" />
+              </LeftArrow>
+              <RightArrow onClick={handleNext}>
+                <img src={Arrow} alt="" />
+              </RightArrow>{" "}
+              <Image>
+                <img src={Phone} alt="" />
+              </Image>
+              <Description>
+                <Name>Watches</Name>
+              </Description>
+            </ProductCard>
+            <ProductCard>
+              <LeftArrow onClick={handlePrev}>
+                <img src={Arrow} alt="" />
+              </LeftArrow>
+              <RightArrow onClick={handleNext}>
+                <img src={Arrow} alt="" />
+              </RightArrow>{" "}
+              <Image>
+                <img src={Phone} alt="" />
+              </Image>
+              <Description>
+                <Name>Watches</Name>
               </Description>
             </ProductCard>
             <ProductCard>
@@ -67,72 +142,17 @@ export const CarouselCard = () => {
               <RightArrow onClick={handleNext}>
                 <img src={Arrow} alt="" />
               </RightArrow>
-              <DiscountPrice>56% off</DiscountPrice>
               <Image>
                 <img src={Phone} alt="" />
               </Image>
               <Description>
-                <Name>Galaxy A53(6 | 64)</Name>
-                <Price> 250$</Price>
-                <Discount> Save 95$</Discount>
+                <Name>Watches</Name>
               </Description>
-            </ProductCard>
-            <ProductCard>
-              <LeftArrow onClick={handlePrev}>
-                <img src={Arrow} alt="" />
-              </LeftArrow>
-              <RightArrow onClick={handleNext}>
-                <img src={Arrow} alt="" />
-              </RightArrow>{" "}
-              <Image>
-                <DiscountPrice>56% off</DiscountPrice>
-
-                <img src={Phone} alt="" />
-              </Image>
-              <Description>
-                <Name>Galaxy A53(6 | 64)</Name>
-                <Price> 250$</Price>
-                <Discount> Save 95$</Discount>
-              </Description>
-            </ProductCard>
-            <ProductCard>
-              <LeftArrow onClick={handlePrev}>
-                <img src={Arrow} alt="" />
-              </LeftArrow>
-              <RightArrow onClick={handleNext}>
-                <img src={Arrow} alt="" />
-              </RightArrow>{" "}
-              <DiscountPrice>56% off</DiscountPrice>
-              <Image>
-                <img src={Phone} alt="" />
-              </Image>
-              <Description>
-                <Name>Galaxy A53(6 | 64)</Name>
-                <Price> 250$</Price>
-                <Discount> Save 95$</Discount>
-              </Description>
-            </ProductCard>
-            <ProductCard>
-              <LeftArrow onClick={handlePrev}>
-                <img src={Arrow} alt="" />
-              </LeftArrow>
-              <RightArrow onClick={handleNext}>
-                <img src={Arrow} alt="" />
-              </RightArrow>{" "}
-              <DiscountPrice>56% off</DiscountPrice>
-              <Image>
-                <img src={Phone} alt="" />
-              </Image>
-              <Description>
-                <Name>Galaxy A53(6 | 64)</Name>
-                <Price> 250$</Price>
-                <Discount> Save 95$</Discount>
-              </Description>
-            </ProductCard>
+            </ProductCard> */}
           </Carousel>
         </Products>
       </OffersContainer>
     </Container>
   );
 };
-export default CarouselCard;
+export default MobileTopCategories;

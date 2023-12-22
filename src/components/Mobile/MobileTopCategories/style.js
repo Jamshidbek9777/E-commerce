@@ -75,8 +75,8 @@ const Image = styled.div`
   width: 132px;
   height: 132px;
   > img {
-    width: 92px;
-    height: 92px;
+    /* width: 92px;
+    height: 92px; */
   }
 `;
 const Name = styled.p`
@@ -87,7 +87,22 @@ const Name = styled.p`
   line-height: 18px; /* 112.5% */
   margin-top: 12px;
 `;
-
+const LeftArrow = styled.div`
+  position: absolute;
+  top: 120px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+`;
+const RightArrow = styled.div`
+  transform: rotate(180deg);
+  position: absolute;
+  top: 120px;
+  right: 1px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+`;
 export {
   Container,
   OffersContainer,
@@ -96,4 +111,6 @@ export {
   Description,
   Image,
   Name,
+  LeftArrow,
+  RightArrow,
 };

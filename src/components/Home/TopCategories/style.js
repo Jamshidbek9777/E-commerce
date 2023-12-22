@@ -13,6 +13,7 @@ const Container = styled.div`
   }
 `;
 const OffersContainer = styled.div`
+display: flex;
   > h1 {
     font-size: 20px;
     margin-top: 50px;
@@ -20,9 +21,10 @@ const OffersContainer = styled.div`
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 30px; /* 125% */
+    line-height: 30px; 
   }
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   @media screen and (max-width: 820px) {
     display: flex;
@@ -30,14 +32,13 @@ const OffersContainer = styled.div`
     align-items: center;
     justify-content: center;
   }
-  /* align-items: center; */
   text-align: center;
 `;
 const Products = styled.div`
-  gap: 15px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ 
 `;
 const ProductCard = styled.div`
   display: flex;
@@ -74,21 +75,16 @@ const Description = styled.div`
   align-items: center;
 `;
 const Image = styled.div`
-  /* position: relative; */
   margin: auto;
-  /* margin-top: ; */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   border-radius: 50%;
-  /* border: 1px solid black; */
   background-color: #f5f5f5;
   width: 132px;
   height: 132px;
   > img {
-    width: 92px;
-    height: 92px;
   }
 `;
 const Name = styled.p`
@@ -96,7 +92,7 @@ const Name = styled.p`
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 18px; /* 112.5% */
+  line-height: 18px; 
 `;
 
 export {

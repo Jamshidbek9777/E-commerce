@@ -81,13 +81,14 @@ const Description = styled.div`
   border-bottom-right-radius: 16px;
 `;
 const Image = styled.div`
+  > img {
+  }
   /* position: relative; */
 `;
 const Name = styled.p`
   color: var(--HEading, #222);
   font-size: 16px;
   font-style: normal;
-
   font-weight: 600;
   line-height: 18px; /* 112.5% */
   margin-top: 12px;

@@ -11,76 +11,31 @@ import {
   Discount,
   DiscountPrice,
 } from "./style";
-import Phone from "../../../assets/imgs/image2.png";
+import data from "../../../data/offers/data";
 export const Offers = () => {
   return (
     <Container>
       <OffersContainer>
-        <h1> Offers in smartphones</h1>
+        <h1>Offers in Smartphones</h1>
         <Products>
-          <ProductCard>
-            <DiscountPrice>56% off</DiscountPrice>
-            <Image>
-              <img src={Phone} alt="" />
-            </Image>
-            <Description>
-              <Name>Galaxy A53(6 | 64)</Name>
-              <Price> 250$</Price>
-              <Discount> Save 95$</Discount>
-            </Description>
-          </ProductCard>
-          <ProductCard>
-            {" "}
-            <DiscountPrice>56% off</DiscountPrice>
-            <Image>
-              <img src={Phone} alt="" />
-            </Image>
-            <Description>
-              <Name>Galaxy A53(6 | 64)</Name>
-              <Price> 250$</Price>
-              <Discount> Save 95$</Discount>
-            </Description>
-          </ProductCard>
-          <ProductCard>
-            {" "}
-            <Image>
-              <DiscountPrice>56% off</DiscountPrice>
-
-              <img src={Phone} alt="" />
-            </Image>
-            <Description>
-              <Name>Galaxy A53(6 | 64)</Name>
-              <Price> 250$</Price>
-              <Discount> Save 95$</Discount>
-            </Description>
-          </ProductCard>
-          <ProductCard>
-            {" "}
-            <DiscountPrice>56% off</DiscountPrice>
-            <Image>
-              <img src={Phone} alt="" />
-            </Image>
-            <Description>
-              <Name>Galaxy A53(6 | 64)</Name>
-              <Price> 250$</Price>
-              <Discount> Save 95$</Discount>
-            </Description>
-          </ProductCard>
-          <ProductCard>
-            {" "}
-            <DiscountPrice>56% off</DiscountPrice>
-            <Image>
-              <img src={Phone} alt="" />
-            </Image>
-            <Description>
-              <Name>Galaxy A53(6 | 64)</Name>
-              <Price> 250$</Price>
-              <Discount> Save 95$</Discount>
-            </Description>
-          </ProductCard>
+          {data.map((item, index) => (
+            <ProductCard key={index}>
+              <DiscountPrice>{item.DiscountDetails}</DiscountPrice>
+              <Image>
+                {/* Use item.src instead of { Phone } */}
+                <img src={item.src} alt="" />
+              </Image>
+              <Description>
+                <Name>{item.name}</Name>
+                <Price>{item.price}</Price>
+                <Discount>{item.Descriptioin}</Discount>
+              </Description>
+            </ProductCard>
+          ))}
         </Products>
       </OffersContainer>
     </Container>
   );
 };
+
 export default Offers;
