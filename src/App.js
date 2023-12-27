@@ -34,7 +34,8 @@ class App extends Component {
             <Route path="/contact" element={<Contact />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="productdetails" element={<ProductDetails />} />
+            <Route path="/productdetails/:id" element={<ProductDetails />} />
+
             {/* <Route path="profile" element={<Profile />} /> */}
           </Routes>
           <Footer />

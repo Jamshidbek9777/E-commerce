@@ -17,8 +17,8 @@ const CategoriesContainer = styled.div`
   margin-top: 2px;
   padding: 17px 20px;
   display: flex;
-  border-radius: 6px;
-  border: 2px solid #dee2e7;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
   background-color: #fff;
   justify-content: space-between;
   @media screen and (max-width: 1133px) {
@@ -31,8 +31,8 @@ const Categories = styled.div`
   @media screen and (max-width: 1133px) {
     display: none;
   }
-  border: 1px solid #dee2e7;
-  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
   > ul {
     @media screen and (max-width: 1430px) {
       padding: 20px 40px;
@@ -55,6 +55,7 @@ const Categories = styled.div`
     max-height: 352px;
     overflow-y: scroll;
     list-style: none;
+    margin-top: 10px;
     > li {
       color: #505050;
       padding: 7px;
@@ -77,7 +78,7 @@ const ImagePlace = styled.div`
       width: 100%;
       height: auto;
     }
-    border-radius: 6px;
+    border-radius: 16px;
   }
   > p {
     @media screen and (max-width: 560px) {
@@ -141,7 +142,7 @@ const Join = styled.div`
   height: 150px;
   margin: 0px 0px 10px 0px;
   border: none;
-  border-radius: 6px;
+  border-radius: 16px;
   > div {
     display: flex;
     > p {
@@ -168,7 +169,7 @@ const Join = styled.div`
     align-items: center;
     gap: 10px;
     flex-shrink: 0;
-    border-radius: 6px;
+    border-radius: 16px;
     background: var(
       --primary-gradient,
       linear-gradient(180deg, #127fff 0%, #0067ff 100%)
@@ -190,7 +191,7 @@ const Login = styled.button`
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  border-radius: 6px;
+  border-radius: 16px;
   cursor: pointer;
   border: none;
   color: #0d6efd !important;
@@ -202,7 +203,7 @@ const Offer = styled.div`
   width: 200px;
   height: 95px;
   background-color: #f38332;
-  border-radius: 6px;
+  border-radius: 16px;
   color: #fff;
   cursor: pointer;
   padding: 10px 40px 16px 16px;
@@ -214,20 +215,20 @@ const Quotes = styled.div`
   color: #fff;
   padding: 10px 40px 16px 16px;
   background-color: #55bdc3;
-  border-radius: 6px;
+  border-radius: 16px;
 `;
 const RightContainer = styled.div`
   @media screen and (max-width: 1646px) {
     display: none;
   }
-  border-radius: 6px;
-  border: 1px solid #8b96a5;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
   width: 200px;
   height: 362px;
   > img {
-    border-radius: 6px;
+    border-radius: 16px;
     width: 193px;
     height: 193px;
   }
@@ -252,7 +253,7 @@ const RightContainer = styled.div`
     font-size: 20px;
     text-align: center;
     flex-shrink: 0;
-    border-radius: 6px;
+    border-radius: 12px;
     background: var(
       --primary-gradient,
       linear-gradient(180deg, #127fff 0%, #0067ff 100%)
@@ -271,14 +272,14 @@ const LeftContainer = styled.div`
   @media screen and (max-width: 1700px) {
     display: none;
   }
-  border-radius: 6px;
-  border: 1px solid #8b96a5;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
   width: 200px;
   height: 362px;
   > img {
-    border-radius: 6px;
+    border-radius: 16px;
     width: 150px;
     height: 150px;
     margin: auto;
@@ -304,7 +305,7 @@ const LeftContainer = styled.div`
     font-size: 20px;
     text-align: center;
     flex-shrink: 0;
-    border-radius: 6px;
+    border-radius: 12px;
     background: var(
       --primary-gradient,
       linear-gradient(180deg, #127fff 0%, #0067ff 100%)

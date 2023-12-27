@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Container,
   OffersContainer,
@@ -11,28 +11,31 @@ import {
   Price,
   Discount,
   DiscountPrice,
+  Line,
 } from "./style";
 import data from "../../../data/offers/data";
+
 export const Offers = () => {
-  const navigate = useNavigate();
   return (
-    <Container onClick={() => navigate("/productdetails")}>
+    <Container>
       <OffersContainer>
         <h1>Offers in Smartphones</h1>
+        <Line> </Line>
         <Products>
-          {data.map((item, index) => (
-            <ProductCard key={index}>
-              <DiscountPrice>{item.DiscountDetails}</DiscountPrice>
-              <Image>
-                {/* Use item.src instead of { Phone } */}
-                <img src={item.src} alt="" />
-              </Image>
-              <Description>
-                <Name>{item.name}</Name>
-                <Price>{item.price}</Price>
-                <Discount>{item.Descriptioin}</Discount>
-              </Description>
-            </ProductCard>
+          {data.map((item) => (
+            <Link key={item.id} to={`/productdetails/${item.id}`}>
+              <ProductCard>
+                <DiscountPrice>{item.DiscountDetails}</DiscountPrice>
+                <Image>
+                  <img src={item.src} alt="" />
+                </Image>
+                <Description>
+                  <Name>{item.name}</Name>
+                  <Price>{item.price}</Price>
+                  <Discount>{item.Descriptioin}</Discount>
+                </Description>
+              </ProductCard>
+            </Link>
           ))}
         </Products>
       </OffersContainer>

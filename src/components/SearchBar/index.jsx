@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Logo from "../../assets/icons/logo.svg";
-import Liked from "../../assets/icons/liked.svg";
-import Cart from "../../assets/icons/cart.svg";
-import Profile from "../../assets/icons/profile.svg";
-import Menu from "../../assets/icons/menu.svg";
+import Liked from "../../assets/searchbaricons/liked.svg";
+import Cart from "../../assets/searchbaricons/cart.svg";
+import Profile from "../../assets/searchbaricons/profile.svg";
+import Menu from "../../assets/searchbaricons/menu.svg";
 import Person from "../../assets/icons/person.svg";
-import MobileCart from "../../assets/icons/mobilecart.svg";
+import MobileCart from "../../assets/searchbaricons/mobilecart.svg";
 import { useNavigate } from "react-router-dom";
 import {
   NavContainer,

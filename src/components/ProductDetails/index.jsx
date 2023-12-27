@@ -1,48 +1,55 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import productData from "../../data/productdetails/data";
 import {
+  About,
+  Availability,
   Container,
+  Content,
+  Description,
   ImagesView,
   MainImage,
   OtherImages,
-  Description,
-  About,
-  Content,
-  Availability,
   ProductInfo,
   Reviews,
-  Price,
+  Rating,
 } from "./style";
-import Futbokla from "../../assets/imgs/futbolka.png";
-export const ProductDetails = () => {
+
+const ProductDetails = () => {
+  const { id } = useParams();
+
+  const product = productData.find((item) => item.id == id);
+  console.log(product);
   return (
     <Container>
       <Content>
         <ImagesView>
           <MainImage>
-            <img src={Futbokla} alt="" />
+            <img src={product.image} alt="" />
           </MainImage>
           <OtherImages>
-            <img src={Futbokla} alt="" />
-            <img src={Futbokla} alt="" />
-            <img src={Futbokla} alt="" />
-            <img src={Futbokla} alt="" />
-            <img src={Futbokla} alt="" />
-            <img src={Futbokla} alt="" />
+            <img src={product.image} alt="" />
+            <img src={product.image} alt="" />
+            <img src={product.image} alt="" />
+            <img src={product.image} alt="" />
+            <img src={product.image} alt="" />
+            <img src={product.image} alt="" />
           </OtherImages>
         </ImagesView>
         <Description>
-          <Availability>In stock</Availability>
-          <ProductInfo>
-            Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle
-          </ProductInfo>
-          <Reviews>32 reviews</Reviews>
-          <Price></Price>
+          <Availability>{product.availability}</Availability>
+          <ProductInfo>{product.name}</ProductInfo>
+          <Reviews>
+            <Rating>
+              <img src={product.rating} alt="" />
+              <p>{product.ratingBall}</p>
+            </Rating>
+          </Reviews>
         </Description>
-        <About>
-          <h1>Germany</h1>
-        </About>
+        <About>Germay</About>
       </Content>
     </Container>
   );
 };
+
 export default ProductDetails;

@@ -7,6 +7,7 @@ import {
   Description,
   Image,
   Name,
+  Line,
 } from "./style";
 import data from "../../../data/topcategories/data";
 export const TopCategories = () => {
@@ -14,6 +15,7 @@ export const TopCategories = () => {
     <Container>
       <OffersContainer>
         <h1> Shop From Top Categories</h1>
+        <Line> </Line>
         <Products>
           {data.map((item, index) => (
             <ProductCard key={index}>

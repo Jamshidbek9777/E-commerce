@@ -46,10 +46,16 @@ export const Description = styled.div``;
 export const About = styled.div``;
 export const Availability = styled.div``;
 export const ProductInfo = styled.div``;
-export const Reviews = styled.div``;
+export const Reviews = styled.div`
+  display: flex;
+`;
 export const Price = styled.div`
   width: 430px;
   height: 72px;
   flex-shrink: 0;
   background-color: #fff0df;
+`;
+export const Image = styled.div``;
+export const Rating = styled.div`
+display: flex;
 `;

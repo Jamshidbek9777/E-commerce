@@ -15,12 +15,12 @@ const Container = styled.div`
 const OffersContainer = styled.div`
   display: flex;
   > h1 {
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 50px;
     color: var(--Text, #666);
     font-size: 24px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 30px;
   }
   display: flex;
@@ -32,7 +32,14 @@ const OffersContainer = styled.div`
     align-items: center;
     justify-content: center;
   }
-  text-align: center;
+  /* text-align: center; */
+`;
+export const Line = styled.div`
+  width: 100%;
+  height: 2px;
+  background-color: #ededed;
+  margin-top: 10px;
+  border-radius: 100px;
 `;
 const Products = styled.div`
   display: flex;
