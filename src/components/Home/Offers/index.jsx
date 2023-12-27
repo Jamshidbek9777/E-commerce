@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Container,
   OffersContainer,
@@ -13,8 +14,9 @@ import {
 } from "./style";
 import data from "../../../data/offers/data";
 export const Offers = () => {
+  const navigate = useNavigate();
   return (
-    <Container>
+    <Container onClick={() => navigate("/productdetails")}>
       <OffersContainer>
         <h1>Offers in Smartphones</h1>
         <Products>

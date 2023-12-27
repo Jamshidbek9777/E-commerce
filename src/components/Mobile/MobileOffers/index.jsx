@@ -52,7 +52,6 @@ export const CarouselCard = () => {
                 </RightArrow>
                 <DiscountPrice>{item.DiscountDetails}</DiscountPrice>
                 <Image>
-                  {/* Use item.src instead of { Phone } */}
                   <img src={item.src} alt="" />
                 </Image>
                 <Description>

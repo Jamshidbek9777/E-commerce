@@ -13,6 +13,8 @@ import Cart from "./components/Cart";
 import MobileSearch from "./components/Mobile/MobileSearch";
 import Sidebar from "./components/Mobile/Sidebar";
 import MobileCategories from "./components/Mobile/MobileCategories";
+import ProductDetails from "./components/ProductDetails";
+import Footer from "./components/Footer";
 class App extends Component {
   render() {
     return (
@@ -25,14 +27,17 @@ class App extends Component {
           <Sidebar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="*" element={<h1>This page not found</h1>} />
             <Route path="/home" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="productdetails" element={<ProductDetails />} />
             {/* <Route path="profile" element={<Profile />} /> */}
           </Routes>
+          <Footer />
         </BrowserRouter>
       </div>
     );

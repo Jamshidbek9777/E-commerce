@@ -13,7 +13,7 @@ const Container = styled.div`
   }
 `;
 const OffersContainer = styled.div`
-display: flex;
+  display: flex;
   > h1 {
     font-size: 20px;
     margin-top: 50px;
@@ -21,7 +21,7 @@ display: flex;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 30px; 
+    line-height: 30px;
   }
   display: flex;
   justify-content: space-between;
@@ -35,10 +35,10 @@ display: flex;
   text-align: center;
 `;
 const Products = styled.div`
- display: flex;
- justify-content: space-between;
- align-items: center;
- 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 `;
 const ProductCard = styled.div`
   display: flex;
@@ -48,7 +48,7 @@ const ProductCard = styled.div`
   align-items: center;
   gap: 20px;
   margin-top: 25px;
-  @media screen and (max-width: 975px) {
+  /* @media screen and (max-width: 975px) {
     position: relative;
     transition: 0.2s all ease-in-out;
     display: flex;
@@ -58,12 +58,12 @@ const ProductCard = styled.div`
     height: 305px;
     border-radius: 16px;
     border: 1px solid #dee2e7;
-  }
+  } */
 `;
 
 const Description = styled.div`
   @media screen and (max-width: 975px) {
-    padding: 0px 50px 10px 50px;
+    /* padding: 0px 50px 10px 50px; */
     border-radius: 16px;
     border: 1px solid #dee2e7;
   }
@@ -92,7 +92,7 @@ const Name = styled.p`
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 18px; 
+  line-height: 18px;
 `;
 
 export {
