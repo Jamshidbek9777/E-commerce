@@ -21,7 +21,10 @@ const OffersContainer = styled.div`
   }
   text-align: center;
 `;
-const Products = styled.div``;
+const Products = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
 const ProductCard = styled.div`
   position: relative;
   margin-top: 20px;
@@ -31,13 +34,14 @@ const ProductCard = styled.div`
     border: 1px solid #008ecc;
   }
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   text-align: center;
-  width: 215px;
+  width: 250px;
   height: 295px;
   border-radius: 16px;
   border: 1px solid #dee2e7;
-  @media screen and (max-width: 975px) {
+  /* @media screen and (max-width: 975px) {
     position: relative;
     transition: 0.2s all ease-in-out;
     display: flex;
@@ -49,17 +53,17 @@ const ProductCard = styled.div`
     border-radius: 16px;
     flex-shrink: 0;
     border: 1px solid #dee2e7;
-  }
+  } */
 `;
 
 const Title = styled.div``;
 const Description = styled.div`
-  @media screen and (max-width: 975px) {
+  /* @media screen and (max-width: 975px) {
     padding: 0px 50px 10px 50px;
     border-radius: 16px;
     margin: 0px 15px;
     border: 1px solid #dee2e7;
-  }
+  } */
   background-color: #fff;
   padding: 0px 30px 10px 30px;
   border-bottom-left-radius: 16px;

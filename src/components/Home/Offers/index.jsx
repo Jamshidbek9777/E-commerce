@@ -23,7 +23,11 @@ export const Offers = () => {
         <Line> </Line>
         <Products>
           {data.map((item) => (
-            <Link key={item.id} to={`/productdetails/${item.id}`}>
+            <Link
+              style={{ textDecoration: "none" }}
+              key={item.id}
+              to={`/productdetails/${item.id}`}
+            >
               <ProductCard>
                 <DiscountPrice>{item.DiscountDetails}</DiscountPrice>
                 <Image>

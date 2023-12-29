@@ -14,7 +14,7 @@ export const Home = () => {
     <div>
       <Categories />
       <Offers />
-      <CarouselCard />
+      {/* <CarouselCard /> */}
       <MobileTopCategories />
       <TopCategories />
       {/* <TopBrands /> */}

@@ -1,47 +1,48 @@
-import Phone from "../../assets/imgs/a54.png";
-import S20 from "../../assets/imgs/s20.png";
-import M13 from "../../assets/imgs/m13.png";
-import M33 from "../../assets/imgs/m33.png";
+import Image1 from "../../assets/imgs/Image1.png";
+import Image2 from "../../assets/imgs/Image2.png";
+import Image3 from "../../assets/imgs/Image3.png";
+import Image4 from "../../assets/imgs/Image4.png";
+import Image5 from "../../assets/imgs/image5.png";
 let data = [
   {
     id: 1,
-    name: "Galaxy A53(6 | 64)",
+    name: "Galaxy S20",
     price: "250$",
     Descriptioin: "Save 35%",
     DiscountDetails: "56% off",
-    src: Phone,
+    src: Image1,
   },
   {
     id: 2,
-    name: "Galaxy A53(6 | 64)",
+    name: "Galaxy M13",
     price: "250$",
     Descriptioin: "Save 35%",
     DiscountDetails: "56% off",
-    src: M13,
+    src: Image2,
   },
   {
     id: 3,
-    name: "Galaxy A53(6 | 64)",
+    name: "Galaxy M33",
     price: "250$",
     Descriptioin: "Save 35%",
     DiscountDetails: "56% off",
-    src: M33,
+    src: Image3,
   },
   {
     id: 4,
-    name: "Galaxy A53(6 | 64)",
+    name: "Galaxy A53",
     price: "250$",
     Descriptioin: "Save 35%",
     DiscountDetails: "56% off",
-    src: Phone,
+    src: Image4,
   },
   {
     id: 5,
-    name: "Galaxy A53(6 | 64)",
+    name: "Galaxy S22",
     price: "250$",
     Descriptioin: "Save 35%",
     DiscountDetails: "56% off",
-    src: Phone,
+    src: Image5,
   },
 ];
 export default data;
