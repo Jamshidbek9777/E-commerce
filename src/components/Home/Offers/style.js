@@ -4,7 +4,7 @@ const Container = styled.div`
   background-color: #f7fafc;
   padding: 0px 160px 20px 160px;
   @media screen and (max-width: 975px) {
-    padding: 0px 25px 0px 25px;
+    padding: 0px 15px 0px 15px;
   }
   @media screen and (max-width: 820px) {
     /* padding: 0px 200px 0px 200px; */
@@ -45,7 +45,7 @@ const Products = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   @media screen and (max-width: 512px) {
-    gap: 5px;
+    gap: 10px;
   }
 `;
 const ProductCard = styled.div`
@@ -69,9 +69,9 @@ const ProductCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 180px;
-    height: 300px;
-    border-radius: 16px;
+    width: 160px;
+    height: 260px;
+    border-radius: 10px;
     border: 1px solid #dee2e7;
   }
 `;
@@ -127,6 +127,9 @@ const Price = styled.p`
 `;
 const Discount = styled.p`
   margin-top: 10px;
+  @media screen and (max-width: 512px) {
+    margin-top: 0;
+  }
   color: #249b3e;
   font-size: 16px;
   font-style: normal;
@@ -154,8 +157,7 @@ const DiscountPrice = styled.span`
   @media screen and (max-width: 512px) {
     width: 35px;
     height: 40px;
-  font-size: 11px;
-
+    font-size: 11px;
   }
 `;
 export {
