@@ -3,6 +3,15 @@ const Container = styled.div`
      margin: auto;
      max-width: 1240px;
      padding: 0 20px;
+
+     /* width: 100%; */
+     /* @media screen and (max-width: 975px) {
+          padding: 0px 15px 0px 15px;
+     }
+     @media screen and (max-width: 820px) {
+          padding: 0px 200px 0px 200px;
+          display: none;
+     } */
 `;
 const OffersContainer = styled.div`
      > h1 {
@@ -49,14 +58,16 @@ const ProductCard = styled.div`
      margin-top: 20px;
      transition: 0.2s all ease-in-out;
      &:hover {
-          /* border: 1px solid #008ecc; */
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          border: 1px solid #008ecc;
      }
      max-width: 300px;
      width: 100%;
      font-size: 0.9rem;
+     height: 320px;
+     flex-shrink: 0;
      border-radius: 16px;
-     /* border: 1px solid #dee2e7; */
+     border: 1px solid #dee2e7;
      /* @media screen and (max-width: 512px) {
           display: flex;
           flex-direction: column;
@@ -75,18 +86,17 @@ const Description = styled.div`
      justify-content: center;
      text-align: center;
      /* text-align: center; */
-     /* width: 100%; */
+     width: 100%;
      border-bottom-left-radius: 16px;
      border-bottom-right-radius: 16px;
-     /* height: 30%; */
+     height: 30%;
 `;
 const Image = styled.div`
-     width: 232px;
-     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 70%;
      > img {
-          object-position: center;
-          width: 100%;
-          border-radius: 16px;
      }
 `;
 const Name = styled.p`
