@@ -9,11 +9,11 @@ import {
      Image,
      Name,
      Price,
-     Discount,
      Line,
+     Icon,
 } from "./style";
 import data from "../../../data/offers/data";
-
+import Cart from "../../../assets/offers_icons/shopping-bag.svg";
 export const Offers = () => {
      return (
           <Container>
@@ -27,16 +27,15 @@ export const Offers = () => {
                                    key={item.id}
                                    to={`/productdetails/${item.id}`}>
                                    <ProductCard>
-                                        {/* <DiscountPrice>{item.DiscountDetails}</DiscountPrice> */}
                                         <Image>
                                              <img src={item.src} alt="" />
                                         </Image>
+                                        <Name>{item.name}</Name>
                                         <Description>
-                                             <Name>{item.name}</Name>
                                              <Price>{item.price}</Price>
-                                             <Discount>
-                                                  {item.Descriptioin}
-                                             </Discount>
+                                             <Icon>
+                                                  <img src={Cart} alt="" />
+                                             </Icon>
                                         </Description>
                                    </ProductCard>
                               </Link>

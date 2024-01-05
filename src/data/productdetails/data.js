@@ -1,12 +1,11 @@
 import Image1 from "../../assets/productdetails_imgs/Image1.jpg";
-import Image2 from "../../assets/imgs/Image2.png";
-import Image3 from "../../assets/imgs/Image3.png";
-import Image4 from "../../assets/imgs/Image4.png";
-import Image5 from "../../assets/imgs/image5.png";
+import Image2 from "../../assets/offers_imgs/Image2.jpg";
+import Image3 from "../../assets/offers_imgs/Image3.jpg";
+import Image4 from "../../assets/offers_imgs/Image4.jpg";
+import Image5 from "../../assets/offers_imgs/Image5.jpg";
 import Rating2 from "../../assets/icons/rating.svg";
 import Flag2 from "../../assets/imgs/flag1.png";
 import Check from "../../assets/icons/check.svg";
-import Image2org from "../../assets/imgs/image2org.jpg";
 let data = [
      {
           id: 1,
@@ -17,7 +16,7 @@ let data = [
           ratingBall: "9.3",
           info: "  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua.",
           sizes: ["4 | 64", "6 | 64", "6 | 128", "8 | 128"],
-          price: "250$",
+          price: 130,
           flag: Flag2,
           image: Image1,
      },
@@ -32,7 +31,7 @@ let data = [
           sizes: ["4 | 64", "6 | 64", "6 | 128", "8 | 128"],
           price: "250$",
           flag: Flag2,
-          image: Image2org,
+          image: Image2,
      },
      {
           id: 3,

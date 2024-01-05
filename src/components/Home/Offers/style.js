@@ -12,7 +12,6 @@ const OffersContainer = styled.div`
           font-size: 24px;
           font-style: normal;
           font-weight: 600;
-          line-height: 30px; /* 125% */
      }
      /* display: flex;
      flex-direction: column;
@@ -50,69 +49,60 @@ const ProductCard = styled.div`
      transition: 0.2s all ease-in-out;
      &:hover {
           /* border: 1px solid #008ecc; */
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          /* box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1); */
      }
      max-width: 300px;
      width: 100%;
      font-size: 0.9rem;
      border-radius: 16px;
-     /* border: 1px solid #dee2e7; */
-     /* @media screen and (max-width: 512px) {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 160px;
-          height: 260px;
-          border-radius: 10px;
-          border: 1px solid #dee2e7;
-     } */
 `;
 
 const Description = styled.div`
+     max-width: 300px;
+     width: 100%;
      background-color: #fff;
      display: flex;
-     flex-direction: column;
-     justify-content: center;
-     text-align: center;
-     /* text-align: center; */
-     /* width: 100%; */
+     width: 100%;
+     justify-content: space-between;
      border-bottom-left-radius: 16px;
      border-bottom-right-radius: 16px;
-     /* height: 30%; */
+     margin-top: 20px;
 `;
 const Image = styled.div`
      width: 232px;
      width: 100%;
+     overflow: hidden;
+     border-radius: 16px;
      > img {
+          overflow: hidden;
+          transition: 0.3s all ease-in-out;
+          &:hover {
+               transform: scale(1.04);
+          }
           object-position: center;
           width: 100%;
           border-radius: 16px;
      }
 `;
 const Name = styled.p`
-     display: flex;
-     justify-content: center;
-     text-align: center;
-     align-items: center;
-     text-decoration: none;
+     display: -webkit-box;
+     -webkit-line-clamp: 2;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+     text-overflow: ellipsis;
      color: var(--HEading, #222);
-     font-size: 16px;
-     font-style: normal;
-     font-weight: 600;
-     line-height: 18px; /* 112.5% */
+     font-size: 12.8px;
      margin-top: 12px;
      @media screen and (max-width: 512px) {
           font-size: 14px;
      }
 `;
 const Price = styled.p`
-     border-bottom: 1px solid #ededed;
-     margin-top: 10px;
+     /* margin-top: 10px; */
      color: var(--HEading, #222);
-     font-size: 16px;
+     font-size: 14px;
      font-style: normal;
-     font-weight: 700;
-     line-height: 18px; /* 112.5% */
+     font-weight: 600;
      @media screen and (max-width: 512px) {
           font-size: 14px;
      }
@@ -151,6 +141,11 @@ const DiscountPrice = styled.span`
           height: 40px;
           font-size: 11px;
      }
+`;
+export const Icon = styled.div`
+>img{
+     width: 17px
+}
 `;
 export {
      Container,

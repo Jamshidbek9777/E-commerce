@@ -59,12 +59,12 @@ const Categories = styled.div`
 const ImagePlace = styled.div`
      margin-top: 2px;
      position: relative;
-     /* background-color: #fff; */
+     /* width: 100%; */
+     height: auto;
      > img {
           @media screen and (max-width: 700px) {
-               /* margin-top: 20px; */
                width: 100%;
-               height: auto;
+               height: 100%;
           }
           border-radius: 16px;
      }

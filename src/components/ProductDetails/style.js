@@ -35,6 +35,7 @@ export const MainImage = styled.div`
                width: 250px;
           }
           width: 100%;
+          border-radius: 16px;
      }
 `;
 export const OtherImages = styled.div`
@@ -174,12 +175,22 @@ export const BuySection = styled.div`
      margin-top: 30px;
 `;
 export const Amount = styled.div`
+     user-select: none;
      display: flex;
      width: 70px;
      align-items: center;
      justify-content: center;
-     border: 1px solid #d7dadd;
+     border: 1px solid #0d79ff;
      border-radius: 4px;
+     > button {
+          border: none;
+          background-color: #fff;
+          margin: 0 10px;
+          user-select: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+     }
 `;
 export const AddToCart = styled.div`
      display: flex;

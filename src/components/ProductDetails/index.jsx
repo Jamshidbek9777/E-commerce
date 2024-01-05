@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import productData from "../../data/productdetails/data";
 import {
@@ -34,9 +34,18 @@ import VerifyLogo from "../../assets/icons/verified_user.svg";
 import WorldLogo from "../../assets/icons/language.svg";
 const ProductDetails = () => {
      const { id } = useParams();
-
      const product = productData.find((item) => item.id == id);
-     console.log(product);
+     const [amount, setAmount] = useState(1);
+     const handleAmountChange = (value) => {
+          if (amount + value > 0) {
+               setAmount(amount + value);
+          }
+     };
+     const [calculatedPrice, setCalculatedPrice] = useState(product.price);
+     useEffect(() => {
+          // Update the calculated price whenever the amount changes
+          setCalculatedPrice(product.price * amount);
+     }, [amount, product.price]);
      return (
           <Container>
                <Content>
@@ -54,7 +63,6 @@ const ProductDetails = () => {
                     </ImagesView>
                     <Description>
                          <Availability>
-                              {" "}
                               <img src={product.check} alt="" />
                               {product.availability}
                          </Availability>
@@ -79,8 +87,18 @@ const ProductDetails = () => {
                               </Sizes>
                          </Size>
                          <BuySection>
-                              <Amount>- 1 +</Amount>
-                              <AddToCart onClick={() => handleClick(item)}>
+                              <Amount>
+                                   <button
+                                        onClick={() => handleAmountChange(-1)}>
+                                        -
+                                   </button>
+                                   {amount}
+                                   <button
+                                        onClick={() => handleAmountChange(1)}>
+                                        +
+                                   </button>
+                              </Amount>
+                              <AddToCart>
                                    <img src={Cart} alt="" />
                                    Add to cart
                               </AddToCart>
@@ -90,8 +108,7 @@ const ProductDetails = () => {
                               </Favourites>
                          </BuySection>
                          <Price>
-                              {" "}
-                              <p>Price: </p> {product.price}
+                              <p>Price: ${calculatedPrice}</p>
                          </Price>
                     </Description>
                     <About>
@@ -105,17 +122,14 @@ const ProductDetails = () => {
                          <Line></Line>
                          <Location>
                               <p>
-                                   {" "}
                                    <img src={product.flag} alt="" />
                                    Germany, Berlin
                               </p>
                               <p>
-                                   {" "}
                                    <img src={VerifyLogo} alt="" />
                                    Verified Seller
                               </p>
                               <p>
-                                   {" "}
                                    <img src={WorldLogo} alt="" />
                                    Worldwide shipping
                               </p>
