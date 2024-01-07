@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
      max-width: 1240px;
+     user-select: none;
+
      margin: auto;
      padding: 0 20px;
 `;
@@ -10,46 +12,60 @@ export const Content = styled.div`
           display: flex;
           justify-content: space-between;
      }
+     @media screen and (max-width: 820px) {
+          display: flex;
+          flex-direction: column;
+     }
      display: flex;
      justify-content: space-between;
-     margin: auto;
-     height: auto;
+     /* margin: auto; */
+     /* height: auto; */
 `;
 export const ImagesView = styled.div`
+     /* max-height: px; */
      width: 350px;
      display: flex;
      flex-direction: column;
      /* margin: 20px; */
-     @media screen and (max-width: 1100px) {
-          width: auto;
+     @media screen and (max-width: 820px) {
+          height: 100%;
+          width: 100%;
           display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          flex-direction: row-reverse;
      }
 `;
 
 export const MainImage = styled.div`
      > img {
           @media screen and (max-width: 1250px) {
-               width: 250px;
+               /* width: 250px; */
           }
           width: 100%;
+          /* max-height: 700px; */
           border-radius: 16px;
      }
 `;
 export const OtherImages = styled.div`
+     gap: 11px;
      margin-top: 20px;
      display: flex;
-     gap: 11.5px;
+     justify-content: space-between;
+     @media screen and (max-width: 820px) {
+          height: inherit;
+          /* overflow-y: scroll; */
+          display: flex;
+          flex-direction: column;
+          /* justify-content: space-between; */
+          margin-top: 0px;
+          margin-right: 20px;
+     }
      > img {
-          @media screen and (max-width: 1250px) {
-               width: 40px;
+          @media screen and (max-width: 820px) {
+               max-width: 250px;
+               width: 100%;
           }
           width: 60px;
-          height: auto;
           border-radius: 10px;
-          /* height: 48px; */
           border: 1px solid #dee2e7;
      }
 `;
@@ -57,9 +73,12 @@ export const Description = styled.div`
      @media screen and (max-width: 1100px) {
           margin: auto;
      }
+     @media screen and (max-width: 820px) {
+          margin-top: 20px;
+     }
 `;
 export const About = styled.div`
-     @media screen and (max-width: 1550px) {
+     @media screen and (max-width: 1250px) {
           display: none;
      }
      width: 280px;
@@ -90,6 +109,9 @@ export const Availability = styled.div`
 export const ProductInfo = styled.div`
      @media screen and (max-width: 1100px) {
           width: 300px;
+     }
+     @media screen and (max-width: 820px) {
+          width: 100%;
      }
      color: #000;
      width: 437px;

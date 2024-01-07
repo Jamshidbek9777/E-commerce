@@ -32,7 +32,7 @@ import Cart from "../../assets/icons/cart.svg";
 import Outline from "../../assets/icons/outline.svg";
 import VerifyLogo from "../../assets/icons/verified_user.svg";
 import WorldLogo from "../../assets/icons/language.svg";
-const ProductDetails = () => {
+const ProductDetails = ({ addToCart }) => {
      const { id } = useParams();
      const product = productData.find((item) => item.id == id);
      const [amount, setAmount] = useState(1);
@@ -43,11 +43,11 @@ const ProductDetails = () => {
      };
      const [calculatedPrice, setCalculatedPrice] = useState(product.price);
      useEffect(() => {
-          // Update the calculated price whenever the amount changes
           setCalculatedPrice(product.price * amount);
      }, [amount, product.price]);
+
      return (
-          <Container>
+          <Container key={product.id}>
                <Content>
                     <ImagesView>
                          <MainImage>
@@ -58,7 +58,7 @@ const ProductDetails = () => {
                               <img src={product.image} alt="" />
                               <img src={product.image} alt="" />
                               <img src={product.image} alt="" />
-                              <img src={product.image} alt="" />
+                              {/* <img src={product.image} alt="" /> */}
                          </OtherImages>
                     </ImagesView>
                     <Description>
@@ -87,18 +87,7 @@ const ProductDetails = () => {
                               </Sizes>
                          </Size>
                          <BuySection>
-                              <Amount>
-                                   <button
-                                        onClick={() => handleAmountChange(-1)}>
-                                        -
-                                   </button>
-                                   {amount}
-                                   <button
-                                        onClick={() => handleAmountChange(1)}>
-                                        +
-                                   </button>
-                              </Amount>
-                              <AddToCart>
+                              <AddToCart onClick={() => addToCart(product)}>
                                    <img src={Cart} alt="" />
                                    Add to cart
                               </AddToCart>

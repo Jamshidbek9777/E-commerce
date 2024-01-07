@@ -15,34 +15,44 @@ import Sidebar from "./components/Mobile/Sidebar";
 import MobileCategories from "./components/Mobile/MobileCategories";
 import ProductDetails from "./components/ProductDetails";
 import Footer from "./components/Footer";
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <BrowserRouter>
-          <SearchBar />
-          <MobileSearch />
-          <Navbar />
-          <MobileCategories />
-          <Sidebar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="*" element={<h1>This page not found</h1>} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/orders" element={<Orders />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/productdetails/:id" element={<ProductDetails />} />
+const App = ({ addToCart, cartItem, setCartItem }) => {
+     return (
+          <div className="App">
+               {/* <BrowserRouter> */}
+               <SearchBar />
+               <MobileSearch />
+               <Navbar />
+               <MobileCategories />
+               <Sidebar />
+               <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="*" element={<h1>This page not found</h1>} />
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/orders" element={<Orders />} />
+                    <Route
+                         path="/cart"
+                         element={
+                              <Cart
+                                   addToCart={addToCart}
+                                   cartItem={cartItem}
+                                   setCartItem={setCartItem}
+                              />
+                         }
+                    />
+                    <Route
+                         path="/productdetails/:id"
+                         element={<ProductDetails addToCart={addToCart} />}
+                    />
 
-            {/* <Route path="profile" element={<Profile />} /> */}
-          </Routes>
-          <Footer />
-        </BrowserRouter>
-      </div>
-    );
-  }
-}
+                    {/* <Route path="profile" element={<Profile />} /> */}
+               </Routes>
+               <Footer />
+               {/* </BrowserRouter> */}
+          </div>
+     );
+};
 
 export default App;

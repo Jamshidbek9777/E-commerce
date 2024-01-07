@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
      Container,
      Wrapper,
@@ -17,48 +18,163 @@ import {
      Mainpage,
      RemoveButton,
      SaveButton,
+     Amount,
+     NoItem,
+     Text,
+     Button,
+     Coupon,
+     TotalPrice,
+     HaveACoupon,
+     InputContainer,
+     Input,
+     Apply,
 } from "./style";
-import Image1 from "../../assets/imgs/Image4.png";
-export const Cart = () => {
+export const Cart = ({ cartItem, setCartItem }) => {
+     const [amount, setAmount] = useState(1);
+
+     const handleAmountChange = (value, index) => {
+          if (cartItem[index] && cartItem[index].quantity + value > 0) {
+               cartItem[index].quantity += value;
+               setCartItem([...cartItem]);
+               setAmount(cartItem[index].quantity);
+          }
+     };
+
+     const removeProduct = (index) => {
+          const updatedCart = [...cartItem];
+          updatedCart.splice(index, 1);
+          setCartItem(updatedCart);
+     };
+     const navigate = useNavigate();
      return (
           <Container>
                <h1>My cart</h1>
                <Mainpage>
                     <Wrapper>
-                         <Card>
-                              <CartCard>
-                                   <LeftSide>
-                                        <Image>
-                                             <img src={Image1} alt="" />
-                                        </Image>
-                                        <Description>
-                                             <Name>Samsung Galaxy A54 5g </Name>
-                                             <Details>
-                                                  <p>Memory: 256GB </p>
-                                                  <p>Ram: 8GB</p>
-                                                  <p>Color: blue</p>
-                                                  <p>Ram: 8GB</p>
-                                             </Details>
-                                             <Seller>
-                                                  Seller: Jamshidbek LLC
-                                             </Seller>
-                                        </Description>
-                                        <Buttons>
-                                             <RemoveButton>Remove</RemoveButton>
-                                             <SaveButton>
-                                                  Save for later
-                                             </SaveButton>
-                                        </Buttons>
-                                   </LeftSide>
-                                   <RightSide>
-                                        <Price>$ 250</Price>
-                                   </RightSide>
-                              </CartCard>
-                         </Card>
+                         {cartItem.length === 0 ? (
+                              <NoItem>
+                                   <Text>
+                                        <h1>Cart is empty</h1>
+                                   </Text>
+                                   <Button>
+                                        <button
+                                             onClick={() => navigate("/home")}>
+                                             Back into shopping
+                                        </button>
+                                   </Button>
+                              </NoItem>
+                         ) : (
+                              cartItem.map((item, index) => (
+                                   <Card key={index}>
+                                        <CartCard>
+                                             <LeftSide>
+                                                  <Image>
+                                                       <img
+                                                            src={item.image}
+                                                            alt=""
+                                                       />
+                                                  </Image>
+                                                  <Description>
+                                                       <Name>{item.name}</Name>
+                                                       <Details>
+                                                            <p>
+                                                                 Memory:{" "}
+                                                                 {item.memory}
+                                                            </p>
+                                                            <p>
+                                                                 Ram: {item.ram}
+                                                            </p>
+                                                            <p>
+                                                                 Color:{" "}
+                                                                 {item.color}
+                                                            </p>
+                                                       </Details>
+                                                       <Seller>
+                                                            Seller:{" "}
+                                                            {item.seller}
+                                                       </Seller>
+                                                  </Description>
+                                                  <Buttons>
+                                                       <RemoveButton
+                                                            onClick={() =>
+                                                                 removeProduct(
+                                                                      index
+                                                                 )
+                                                            }>
+                                                            Remove
+                                                       </RemoveButton>
+                                                       <SaveButton>
+                                                            Save for later
+                                                       </SaveButton>
+                                                  </Buttons>
+                                                  <Amount>
+                                                       <button
+                                                            onClick={() =>
+                                                                 handleAmountChange(
+                                                                      -1,
+                                                                      index
+                                                                 )
+                                                            }>
+                                                            -
+                                                       </button>
+                                                       {item.quantity}
+                                                       <button
+                                                            onClick={() =>
+                                                                 handleAmountChange(
+                                                                      1,
+                                                                      index
+                                                                 )
+                                                            }>
+                                                            +
+                                                       </button>
+                                                  </Amount>
+                                             </LeftSide>
+                                             <RightSide>
+                                                  <Price>
+                                                       $
+                                                       {item.price *
+                                                            item.quantity}
+                                                  </Price>
+                                             </RightSide>
+                                        </CartCard>
+                                   </Card>
+                              ))
+                         )}
                     </Wrapper>
-                    <Checkout>go</Checkout>
+                    {cartItem.length !== 0 && (
+                         <Checkout>
+                              <Coupon>
+                                   <HaveACoupon>Have a coupon?</HaveACoupon>
+                                   <InputContainer>
+                                        <Input placeholder="Add a coupon"></Input>
+                                        <Apply>Apply</Apply>
+                                   </InputContainer>
+                              </Coupon>
+                              <TotalPrice>
+                                   <div>
+                                        <div>
+                                             <div>
+                                                  <h4>Subtotal:</h4>
+                                                  <h4>Discount:</h4>
+                                                  <h4>Tax:</h4>
+                                             </div>
+                                             <div>
+                                                  <p>$1403.97</p>
+                                                  <p>$1403.97</p>
+                                                  <p>$1403.97</p>
+                                             </div>
+                                        </div>
+                                        <h4>
+                                             Total: <p>$1500</p>
+                                        </h4>
+                                        <button>Checkout</button>
+                                   </div>
+                              </TotalPrice>
+                         </Checkout>
+                    )}
                </Mainpage>
           </Container>
      );
 };
+
 export default Cart;

@@ -30,10 +30,9 @@ const Middle = styled.div`
 `;
 const Input = styled.input`
      z-index: 1000;
-
      height: 40px;
      width: 400px;
-     border-radius: 16px 0 0 16px;
+     border-radius: 6px 0 0 6px;
      outline: none;
      display: flex;
      justify-content: center;
@@ -67,7 +66,7 @@ const SearchButton = styled.button`
      height: 40px;
      width: 80px;
      border: none;
-     border-radius: 0 16px 16px 0;
+     border-radius: 0 6px 6px 0;
      color: #fff;
 
      @media screen and (max-width: 850px) {
