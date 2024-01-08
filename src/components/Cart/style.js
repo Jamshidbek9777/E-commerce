@@ -17,15 +17,29 @@ export const Mainpage = styled.div`
      display: flex;
      justify-content: space-between;
      gap: 20px;
+     @media screen and (max-width: 1120px) {
+          display: flex;
+          flex-direction: column;
+     }
 `;
 export const Card = styled.div``;
 export const CartCard = styled.div`
      justify-content: space-between;
      padding: 28px 25px;
      display: flex;
+     @media screen {
+          padding: 8px 10px;
+     }
 `;
 export const LeftSide = styled.div`
      display: flex;
+     > div {
+          display: flex;
+     }
+     @media screen and (max-width: 725px) {
+          display: flex;
+          flex-direction: column;
+     }
 `;
 export const RightSide = styled.div`
      display: flex;
@@ -33,8 +47,13 @@ export const RightSide = styled.div`
      align-items: center;
      text-align: center;
      user-select: none;
+     @media screen and (max-width: 535px) {
+          flex-direction: column;
+          justify-content: space-between;
+     }
 `;
 export const Description = styled.div`
+     /* display: flex; */
      margin-left: 20px;
      max-width: 250px;
      width: 100%;
@@ -46,7 +65,9 @@ export const Name = styled.div`
      font-weight: 500;
      line-height: 22px;
      margin-bottom: 10px;
-     /* width: 462px; */
+     @media screen and (max-width: 535px) {
+          font-size: 14px;
+     }
 `;
 export const Image = styled.div`
      display: flex;
@@ -67,6 +88,9 @@ export const Details = styled.div`
      font-weight: 400;
      line-height: 24px;
      letter-spacing: -0.2px;
+     @media screen and (max-width: 535px) {
+          font-size: 14px;
+     }
 `;
 export const Seller = styled.div`
      display: flex;
@@ -83,6 +107,17 @@ export const Price = styled.div`
      align-items: center;
      text-align: center;
      user-select: none;
+     @media screen and (max-width: 535px) {
+          color: #fff;
+          height: 30px;
+          font-size: 14px;
+          padding: 0px 15px;
+          border-radius: 6px;
+          background: var(
+               --primary-gradient,
+               linear-gradient(180deg, #127fff 0%, #0067ff 100%)
+          );
+     }
 `;
 
 export const Buttons = styled.div`
@@ -96,9 +131,16 @@ export const Buttons = styled.div`
           display: flex;
           flex-direction: column;
      }
+     @media screen and (max-width: 720px) {
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: start;
+          margin: 0;
+          margin-top: 10px;
+     }
 `;
 export const RemoveButton = styled.button`
-     width: 100px;
      display: flex;
      height: 40px;
      padding: 0px 15px;
@@ -116,9 +158,13 @@ export const RemoveButton = styled.button`
      font-weight: 500;
      line-height: normal;
      cursor: pointer;
+     @media screen and (max-width: 535px) {
+          font-size: 13px;
+          padding: 0 8px;
+          height: 30px;
+     }
 `;
 export const SaveButton = styled.button`
-     width: 150px;
      display: inline-flex;
      height: 40px;
      padding: 0px 15px;
@@ -138,19 +184,27 @@ export const SaveButton = styled.button`
      font-weight: 500;
      line-height: normal;
      cursor: pointer;
+     @media screen and (max-width: 535px) {
+          font-size: 13px;
+          padding: 0 8px;
+          height: 30px;
+     }
 `;
 export const Amount = styled.div`
+     margin-right: 10px;
      user-select: none;
      display: flex;
-     width: 70px;
      align-items: center;
      justify-content: center;
-     /* border: 1px solid #0d79ff; */
+     /* width: 70px; */
      border-radius: 4px;
+     @media screen and (max-width: 535px) {
+     }
      > button {
+          font-size: 12px;
           border: none;
           background-color: #fff;
-          margin: 0 10px;
+          margin: 0 5px;
           user-select: none;
           display: flex;
           align-items: center;
@@ -198,12 +252,22 @@ export const Checkout = styled.div`
 
 export const Coupon = styled.div`
      width: 280px;
-
      height: 110px;
      border: 1px solid #dee2e7;
      border-radius: 6px;
+     @media screen and (max-width: 1120px) {
+          width: 100%;
+          max-width: 400px;
+     }
 `;
 export const TotalPrice = styled.div`
+     @media screen and (max-width: 1120px) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          max-width: 400px;
+     }
      width: 280px;
      height: 302px;
      border: 1px solid #dee2e7;
@@ -268,6 +332,9 @@ export const TotalPrice = styled.div`
 `;
 
 export const HaveACoupon = styled.p`
+     display: flex;
+     justify-content: center;
+     align-items: center;
      color: var(--gray-600, #505050);
      font-size: 16px;
      font-style: normal;

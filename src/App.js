@@ -16,10 +16,11 @@ import MobileCategories from "./components/Mobile/MobileCategories";
 import ProductDetails from "./components/ProductDetails";
 import Footer from "./components/Footer";
 const App = ({ addToCart, cartItem, setCartItem }) => {
+     const cartLength = cartItem.length;
      return (
           <div className="App">
                {/* <BrowserRouter> */}
-               <SearchBar />
+               <SearchBar cartLength={cartLength} />
                <MobileSearch />
                <Navbar />
                <MobileCategories />

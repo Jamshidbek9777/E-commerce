@@ -89,9 +89,26 @@ const LikedContainer = styled.a`
      text-align: center;
 `;
 const CartContainer = styled.a`
+     position: relative;
      justify-content: center;
      align-items: center;
      text-align: center;
+     > span {
+          position: absolute;
+          color: white;
+          bottom: 47px;
+          left: 27px;
+          background-color: red;
+          border-radius: 100px;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          vertical-align: center;
+          font-size: 13px;
+     }
 `;
 const ProfileContainer = styled.a`
      margin-left: 50px;

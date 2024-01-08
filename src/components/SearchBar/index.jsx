@@ -24,7 +24,7 @@ import {
      Line,
 } from "./style";
 import Sidebar from "../Mobile/Sidebar";
-const SearchBar = () => {
+const SearchBar = ({ cartLength }) => {
      const [sidebar, setSidebar] = useState(false);
      const showSidebar = () => setSidebar(true);
      const closeSidebar = () => setSidebar(false);
@@ -56,7 +56,8 @@ const SearchBar = () => {
                          <CartContainer onClick={() => navigate("/cart")}>
                               <img src={Cart} alt="" />
                               <p>Cart</p>
-                              {/* <span></span> */}
+                              {/* <span>0</span> */}
+                              {cartLength !== 0 && <span>{cartLength}</span>}
                          </CartContainer>
                     </RightSide>
                </div>

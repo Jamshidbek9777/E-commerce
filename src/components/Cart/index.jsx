@@ -68,32 +68,44 @@ export const Cart = ({ cartItem, setCartItem }) => {
                                    <Card key={index}>
                                         <CartCard>
                                              <LeftSide>
-                                                  <Image>
-                                                       <img
-                                                            src={item.image}
-                                                            alt=""
-                                                       />
-                                                  </Image>
-                                                  <Description>
-                                                       <Name>{item.name}</Name>
-                                                       <Details>
-                                                            <p>
-                                                                 Memory:{" "}
-                                                                 {item.memory}
-                                                            </p>
-                                                            <p>
-                                                                 Ram: {item.ram}
-                                                            </p>
-                                                            <p>
-                                                                 Color:{" "}
-                                                                 {item.color}
-                                                            </p>
-                                                       </Details>
-                                                       <Seller>
-                                                            Seller:{" "}
-                                                            {item.seller}
-                                                       </Seller>
-                                                  </Description>
+                                                  <div>
+                                                       {" "}
+                                                       <Image>
+                                                            <img
+                                                                 src={
+                                                                      item.image
+                                                                 }
+                                                                 alt=""
+                                                            />
+                                                       </Image>
+                                                       <Description>
+                                                            <Name>
+                                                                 {item.name}
+                                                            </Name>
+                                                            <Details>
+                                                                 <p>
+                                                                      Memory:{" "}
+                                                                      {
+                                                                           item.memory
+                                                                      }
+                                                                 </p>
+                                                                 <p>
+                                                                      Ram:{" "}
+                                                                      {item.ram}
+                                                                 </p>
+                                                                 <p>
+                                                                      Color:{" "}
+                                                                      {
+                                                                           item.color
+                                                                      }
+                                                                 </p>
+                                                            </Details>
+                                                            <Seller>
+                                                                 Seller:{" "}
+                                                                 {item.seller}
+                                                            </Seller>
+                                                       </Description>
+                                                  </div>
                                                   <Buttons>
                                                        <RemoveButton
                                                             onClick={() =>
@@ -107,6 +119,8 @@ export const Cart = ({ cartItem, setCartItem }) => {
                                                             Save for later
                                                        </SaveButton>
                                                   </Buttons>
+                                             </LeftSide>
+                                             <RightSide>
                                                   <Amount>
                                                        <button
                                                             onClick={() =>
@@ -128,8 +142,6 @@ export const Cart = ({ cartItem, setCartItem }) => {
                                                             +
                                                        </button>
                                                   </Amount>
-                                             </LeftSide>
-                                             <RightSide>
                                                   <Price>
                                                        $
                                                        {item.price *
