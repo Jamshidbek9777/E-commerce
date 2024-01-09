@@ -12,13 +12,13 @@ import {
      Line,
      Icon,
 } from "./style";
-import data from "../../../data/offers/data";
-import Cart from "../../../assets/offers_icons/shopping-bag.svg";
+import data from "../../../../data/offers/watch-offers";
+import Cart from "../../../../assets/offers_icons/shopping-bag.svg";
 export const Offers = () => {
      return (
           <Container>
                <OffersContainer>
-                    <h1>Offers in Smartphones</h1>
+                    <h1>Offers in Smartwatches</h1>
                     <Line> </Line>
                     <Products>
                          {data.map((item) => (

@@ -16,7 +16,7 @@ const Container = styled.div`
 
       > li {
         width: fit-content;
-        padding: 5px 5px;
+        padding: 5px 10px;
         height: 36px;
         flex-shrink: 0;
         flex-shrink: 0;

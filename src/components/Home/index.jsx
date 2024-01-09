@@ -1,7 +1,7 @@
 import React from "react";
 import Categories from "./Categories/index";
-import Offers from "./Offers";
-import OffersCopy from "./Offerscopy";
+import SmarthoneOffers from "../Home/Offers/Smartphone-offers";
+import SmartwatchesOffers from "../Home/Offers/watch-offers";
 // import CarouselCard from "../Mobile/MobileOffers";
 import MobileTopCategories from "../Mobile/MobileTopCategories";
 import TopCategories from "./TopCategories";
@@ -14,7 +14,8 @@ export const Home = () => {
      return (
           <div>
                <Categories />
-               <Offers />
+               <SmarthoneOffers />
+               <SmartwatchesOffers />
                {/* <OffersCopy /> */}
                {/* <CarouselCard /> */}
                {/* <MobileTopCategories /> */}
